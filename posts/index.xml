@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Alex Lawrence</title>
+    <link>https://www.alex-lawrence.com/posts/</link>
+    <description>Recent content in Blog on Alex Lawrence</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2020 Alex Lawrence</copyright>
+    <lastBuildDate>Mon, 21 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.alex-lawrence.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why my book uses Node.js and JavaScript</title>
+      <link>https://www.alex-lawrence.com/posts/why-my-book-uses-nodejs-and-javascript/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.alex-lawrence.com/posts/why-my-book-uses-nodejs-and-javascript/</guid>
+      <description>This article explains why I chose Node.js as runtime platform and JavaScript as programming language for my book. The described reasons incorporate personal experience, the desired target audience as well as platform and language characteristics. Also, the benefits and implications of static types are briefly discussed. Finally, the article closes with an outlook of future additions to the existing book.
+Personal experience One reason for using Node.js and JavaScript in my book is that I&amp;rsquo;ve worked with both for almost 8 years.</description>
+    </item>
+    
+    <item>
+      <title>Why I wrote a book on DDD, CQRS and Event Sourcing</title>
+      <link>https://www.alex-lawrence.com/posts/why-i-wrote-a-book-on-ddd-cqrs-and-event-sourcing/</link>
+      <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.alex-lawrence.com/posts/why-i-wrote-a-book-on-ddd-cqrs-and-event-sourcing/</guid>
+      <description>This article explains my motivation for writing a book on DDD, CQRS and Event Sourcing. It starts with outlining how I came in contact with the concepts. Then, it describes how I first applied the patterns accidentally and afterwards worked with them extensively. Finally, it presents the initial book idea, my personal progress throughout the years and the actual result.
+First contact I first heard of Domain-Driven Design when I worked as a Senior Software Developer at AutoScout24.</description>
+    </item>
+    
+    <item>
+      <title>The financial cost of writing a book</title>
+      <link>https://www.alex-lawrence.com/posts/the-financial-cost-of-writing-a-book/</link>
+      <pubDate>Mon, 14 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.alex-lawrence.com/posts/the-financial-cost-of-writing-a-book/</guid>
+      <description>One essential question for every potential book author is: What does it financially cost to write a book? Obviously, there is no universal answer to this. Furthermore, in most cases, the goal is to not only cover the cost, but also to earn additional money. In any case, it is important to know what the financial cost of a book project is. Only then, one can decide whether it is worth to do it.</description>
+    </item>
+    
+  </channel>
+</rss>
