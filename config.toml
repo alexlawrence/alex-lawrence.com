@@ -8,8 +8,6 @@ copyright = "© 2020 Alex Lawrence"
 pygmentsstyle = "dracula"
 pygmentscodefences = true
 
-# disqusShortname = "alex-lawrence"
-
 [params]
 subtitle = "Full-Stack Developer, Technical Lead, Software Architect"
 disableDisqusTypes = ["page"]
