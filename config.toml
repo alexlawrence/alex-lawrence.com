@@ -1,0 +1,58 @@
+baseURL = "https://www.alex-lawrence.com/"
+languageCode = "en-us"
+title = "Alex Lawrence"
+theme = "ezhil"
+
+copyright = "© 2020 Alex Lawrence"
+
+pygmentsstyle = "dracula"
+pygmentscodefences = true
+
+# disqusShortname = "alex-lawrence"
+
+[params]
+subtitle = "Full-Stack Developer, Technical Lead, Software Architect"
+disableDisqusTypes = ["page"]
+mode = "auto"
+customCSS = "css/index.css"
+customJS = ["js/index.js"]
+
+[[menu.main]]
+name = "Profile"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Resume"
+url = "/resume"
+weight = 2
+
+[[menu.main]]
+name = "Blog"
+url = "/posts"
+weight = 3
+
+[[menu.main]]
+name = "Publications"
+url = "/publications"
+weight = 4
+
+[[menu.main]]
+name = "Contact"
+url = "/contact"
+weight = 5
+
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/alexlawrence"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/lx_lawrence"
+
+[[params.social]]
+name = "RSS"
+icon = "rss"
+url = "/posts/index.xml"
