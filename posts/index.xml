@@ -41,5 +41,14 @@ First contact I first heard of Domain-Driven Design when I worked as a Senior So
       <description>One essential question for every potential book author is: What does it financially cost to write a book? Obviously, there is no universal answer to this. Furthermore, in most cases, the goal is to not only cover the cost, but also to earn additional money. In any case, it is important to know what the financial cost of a book project is. Only then, one can decide whether it is worth to do it.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://www.alex-lawrence.com/posts/the-power-of-the-filesystem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.alex-lawrence.com/posts/the-power-of-the-filesystem/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

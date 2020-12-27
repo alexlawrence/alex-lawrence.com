@@ -20,7 +20,10 @@
   <url>
     <loc>https://www.alex-lawrence.com/</loc>
     <lastmod>2020-12-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.alex-lawrence.com/posts/the-power-of-the-filesystem/</loc>
   </url>
   
   <url>
@@ -35,10 +38,6 @@
   
   <url>
     <loc>https://www.alex-lawrence.com/contact/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/</loc>
   </url>
   
   <url>
