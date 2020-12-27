@@ -1,7 +1,5 @@
 ---
-title: "Profile"
 type: "page"
-url: "/"
 ---
 
 I am a software developer with knowledge and experience in architecture, automation, backend, frontend, operations, teaching, technical leadership and testing. Since 2007, my professional focus lies on full-stack web development. 
