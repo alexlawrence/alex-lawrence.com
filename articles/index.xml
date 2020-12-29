@@ -19,7 +19,7 @@
       
       <guid>https://www.alex-lawrence.com/articles/using-the-filesystem-for-illustration-purposes/</guid>
       <description>This article describes the approach of using the filesystem for illustrating the implementation of concepts related to persistence and messaging. Some of the explanations are put into the context of my book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo;. The approach is compared to the alternatives of using existing technologies as well as providing pseudo in-memory implementations. At the end, the article outlines the most relevant benefits and implications.
-Filesystem for persistence and IPC Apart from Node.</description>
+The approach Apart from Node.</description>
     </item>
     
     <item>
