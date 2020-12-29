@@ -28,8 +28,8 @@ The approach Apart from Node.</description>
       <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://www.alex-lawrence.com/articles/why-my-book-uses-nodejs-and-javascript/</guid>
-      <description>This article explains why I chose Node.js as runtime platform and JavaScript as programming language for my book. The described reasons incorporate personal experience, the desired target audience, as well as platform and language characteristics. Also, the benefits and implications of static types are briefly discussed. Finally, the article closes with an outlook of future additions to the existing book.
-Personal experience One reason for using Node.js and JavaScript in my book is that I&amp;rsquo;ve worked with both for almost 8 years.</description>
+      <description>This article explains why I chose Node.js as runtime platform and JavaScript as programming language for my book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo;. The described reasons incorporate personal experience, the desired target audience, as well as platform and language characteristics. Also, the benefits and implications of static types are briefly discussed. Finally, the article closes with an outlook of future additions to the existing book.
+Personal experience One reason for using Node.</description>
     </item>
     
     <item>
