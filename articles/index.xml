@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Alex Lawrence</title>
-    <link>https://www.alex-lawrence.com/</link>
-    <description>Recent content on Alex Lawrence</description>
+    <title>Articles on Alex Lawrence</title>
+    <link>https://www.alex-lawrence.com/articles/</link>
+    <description>Recent content in Articles on Alex Lawrence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 Alex Lawrence</copyright>
     <lastBuildDate>Tue, 29 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.alex-lawrence.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.alex-lawrence.com/articles/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -49,37 +49,6 @@ First contact I first heard of Domain-Driven Design when I worked as a Senior So
       
       <guid>https://www.alex-lawrence.com/articles/the-financial-cost-of-writing-a-book/</guid>
       <description>One essential question for every potential book author is: What does it financially cost to write a book? Obviously, there is no universal answer to this. Furthermore, in most cases, the goal is to not only cover the cost, but also to earn additional money. In any case, it is important to know what the financial cost of a book project is. Only then, one can decide whether it is worth to do it.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://www.alex-lawrence.com/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.alex-lawrence.com/contact/</guid>
-      <description>QWxleGFuZGVyIExhd3JlbmNlPGJyPlNjaGFyZnJlaXRlcnBsYXR6IDE2PGJyPjgxNTQ5IE11bmljaA== E-Mail: bWFpbEBhbGV4LWxhd3JlbmNlLmNvbQ==</description>
-    </item>
-    
-    <item>
-      <title>Publications</title>
-      <link>https://www.alex-lawrence.com/publications/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.alex-lawrence.com/publications/</guid>
-      <description>Implementing DDD, CQRS and Event Sourcing    This book explains and illustrates how to implement Domain-Driven Design, Command Query Responsibility Segregation and Event Sourcing. The goal is to build software that is behavior-rich, event-based, problem-centric, reactive, scalable and well-designed.  Domain-Driven Design is a concept that focuses on the problem space and its associated knowledge areas. Command Query Responsibility Segregation separates a software into a write side and a read side.</description>
-    </item>
-    
-    <item>
-      <title>Resume</title>
-      <link>https://www.alex-lawrence.com/resume/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.alex-lawrence.com/resume/</guid>
-      <description>Full-Stack Developer, Technical Lead, Software Architect – Alex Lawrence December 2013 - today
- Freelance work as Full-Stack Developer, Technical Lead, Software Architect and Consultant Open-Source Projects on Github  Book Author - Implementing DDD, CQRS and Event Sourcing December 2016 - today
-Topics: Domain-Driven Design, Command-Query-Responsibility-Segragation, Event Sourcing, Node.js
-Software Developer - Personio April 2019 - November 2020
- Global Design/UX improvements Full-Stack Feature Development Maintainer of Design System &amp;amp; UI Library Consultant for CQRS, DDD, Event-driven Architecture and Event Sourcing Languages: CSS, flowtype, HTML, JavaScript, TypeScript, SCSS Technologies: CSS Modules, Jest, JSX, React (+ Testing Library), redux, redux-saga, Webpack  Frontend Developer - AutoScout24 GmbH November 2018 - March 2019</description>
     </item>
     
   </channel>
