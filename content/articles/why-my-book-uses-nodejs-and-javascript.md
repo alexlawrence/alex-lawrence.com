@@ -14,7 +14,7 @@ One reason for using Node.js and JavaScript in my book is that I've worked with 
 
 ## Broad audience
 
-Another reason for JavaScript is that it is a very widespread language, with which I can reach a broad audience. While not everybody may like it, there are many people who understand it. Also, its syntax can look similar to other languages. such as Java or C#, especially when using classes. While there are programming languages with distinct characteristics for specific purposes, the use of JavaScript simply enables a high reach.
+Another reason for JavaScript is that it is a very widespread language, with which I can reach a broad audience. While not everybody may like it, there are many people who understand it. Also, its syntax can look similar to other languages, such as Java or C#, especially when using classes. While there are programming languages with distinct characteristics for specific purposes, the use of JavaScript simply enables a high reach.
 
 As for syntax similarities, here is an exemplary Application Services class in JavaScript:
 
