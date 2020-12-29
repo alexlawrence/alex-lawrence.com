@@ -54,7 +54,7 @@ class BookRepository extends FilesystemRepository {
       convertToEntity: data => new Book(data)});
   }
 
-  findBooksPublishedAfter(date) {
+  async findBooksPublishedAfter(date) {
     const files = await readdir(this.storageDirectory);
     const ids = files.map(filename => filename.replace('.json', ''));
     const entities = await Promise.all(ids.map(id => this.load(id)));
