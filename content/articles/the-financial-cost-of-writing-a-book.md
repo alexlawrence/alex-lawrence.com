@@ -5,6 +5,7 @@ keywords: book, authorship, cost calculation
 title: "The financial cost of writing a book"
 aliases: 
   - /posts/the-cost-of-writing-a-book
+  - /posts/the-financial-cost-of-writing-a-book
 ---
 
 One essential question for every potential book author is: **What does it financially cost to write a book?** Obviously, there is no universal answer to this. Furthermore, in most cases, the goal is to not only cover the cost, but also to earn additional money. In any case, it is important to know what the financial cost of a book project is. Only then, one can decide whether it is worth to do it.

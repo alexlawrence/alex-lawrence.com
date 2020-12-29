@@ -2,6 +2,8 @@
 date: 2020-12-21
 keywords: ddd, cqrs, eventsourcing, javascript, nodejs
 title: Why my book uses Node.js and JavaScript
+aliases: 
+  - /posts/why-my-book-uses-nodejs-and-javascript
 ---
 
 This article explains why I chose Node.js as runtime platform and JavaScript as programming language for [my book](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing). The described reasons incorporate personal experience, the desired target audience, as well as platform and language characteristics. Also, the benefits and implications of static types are briefly discussed. Finally, the article closes with an outlook of future additions to the existing book.
@@ -66,30 +68,34 @@ My book contains a dedicated chapter on the User Interface part. There, I also u
 
 Over the years, I've worked with multiple languages, runtimes and servers for backends. Professionally, I used PHP and Apache, as well as C#, the CLR and IIS. When I started with Node.js, I was impressed by the minimal overhead for certain use cases. At the same time, it also felt suitable for building complex production-grade software, especially with selected third-party libraries. Overall, it made a good fit for the implementations in my book, which often serve an illustration purpose.
 
-As an example, take a look at a greatly simplified variant of a filesystem-based Repository:
+As an example, take a look at a simplified factory for creating an HTTP filesystem interface:
 
 ```js
-class FilesystemRepository {
+const createHttpFilesystemInterface = pathResolver =>
+  async (request, response) => {
+    const filePath = pathResolver(request);
+    try {
+      await stat(filePath);
+      const fileExtension = path.extname(filePath);
+      const contentType = contentTypeByExtension[fileExtension] || 'text/plain';
+      response.writeHead(200, {'Content-Type': contentType});
+      createReadStream(filePath).pipe(response);
+    } catch (error) {
+      response.writeHead(404);
+      response.end();
+    }
+  };
 
-  constructor({storageDirectory, convertToData, convertToEntity}) {
-    mkdirSync(storageDirectory, {recursive: true});
-    this.#storageDirectory = storageDirectory;
-    this.#convertToData = convertToData;
-    this.#convertToEntity = convertToEntity;
-    this.getFilePath = id => `${this.#storageDirectory}/${id}.json`;
-  }
+const contentTypeByExtension = {
+  '.js': 'application/javascript',
+  '.html': 'text/html',
+  '.css': 'text/css',
+};
 
-  async save(entity) {
-    const data = this.#convertToData(entity);
-    await writeFile(this.getFilePath(entity.id), JSON.stringify(data));
-  }
-
-  async load(id) {
-    const dataString = await readFile(this.getFilePath(id), 'utf-8');
-    return this.#convertToEntity(JSON.parse(dataString));
-  }
-
-}
+// example usage
+const httpFilesystemInterface = createHttpFilesystemInterface(
+  request => `${rootDirectory}/${url.parse(request.url).pathname}`);
+http.createServer(httpFilesystemInterface).listen(50000);
 ```
 
 This is not to exemplify that Node.js generally makes things simpler. However, there are many platforms where there is a lot more boilerplate code to it.

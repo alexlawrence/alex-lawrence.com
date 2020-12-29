@@ -1,7 +1,9 @@
 ---
 date: 2020-12-18
 keywords: book, ddd, cqrs, eventsourcing, javascript, nodejs
-title: Why I wrote a book on DDD, CQRS and Event Sourcing 
+title: Why I wrote a book on DDD, CQRS and Event Sourcing
+aliases: 
+  - /posts/why-i-wrote-a-book-on-ddd-cqrs-and-event-sourcing
 ---
 
 This article explains my motivation for writing a book on DDD, CQRS and Event Sourcing. It starts with outlining how I came in contact with the concepts. Then, it describes how I first applied the patterns accidentally and afterwards worked with them extensively. Finally, it presents the initial book idea, my personal progress throughout the years and the actual result. 
