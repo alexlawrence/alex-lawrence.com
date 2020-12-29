@@ -6,7 +6,7 @@ title: Using the filesystem for illustration purposes
 
 This article describes the approach of using the filesystem for illustrating the implementation of concepts related to persistence and messaging. Some of the explanations are put into the context of my book ["Implementing DDD, CQRS and Event Sourcing"](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing). The approach is compared to the alternatives of using existing technologies as well as providing pseudo in-memory implementations. At the end, the article outlines the most relevant benefits and implications.
 
-## Filesystem for persistence and IPC
+## The approach
 
 Apart from Node.js and JavaScript, my book does not explain or utilize specific frameworks or technologies. For all functionalities that require persistence or inter-process communication (IPC), it provides exemplary implementations that work with directly the filesystem. This includes Repositories, the Event Store, Read Model storages and an inter-process event distribution. The goal is to convey a deeper understanding of the concepts that are related to persistence and messaging. For production purposes, these implementations can be easily replaced with suitable technologies.
 
