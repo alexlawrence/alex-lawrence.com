@@ -135,7 +135,7 @@ Filesystem for persistence and IPC Apart from Node."/>
       convertToEntity<span style="color:#ff79c6">:</span> data =&gt; <span style="color:#ff79c6">new</span> Book(data)});
   }
 
-  findBooksPublishedAfter(date) {
+  <span style="color:#ff79c6">async</span> findBooksPublishedAfter(date) {
     <span style="color:#ff79c6">const</span> files <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> readdir(<span style="color:#ff79c6">this</span>.storageDirectory);
     <span style="color:#ff79c6">const</span> ids <span style="color:#ff79c6">=</span> files.map(filename =&gt; filename.replace(<span style="color:#f1fa8c">&#39;.json&#39;</span>, <span style="color:#f1fa8c">&#39;&#39;</span>));
     <span style="color:#ff79c6">const</span> entities <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> <span style="color:#8be9fd;font-style:italic">Promise</span>.all(ids.map(id =&gt; <span style="color:#ff79c6">this</span>.load(id)));
