@@ -113,6 +113,5 @@ The class `InMemoryRepository` is a Repository that stores Entities transiently.
 Using the filesystem for illustrating concepts related to persistence or IPC can be beneficial, but also has its implications. Ideally, it enables to acquire detailed knowledge. Also, it avoids any bias towards suitable technologies, does not require additional knowledge and can prevent overhead. At the same time, using the filesystem for complex topics can be tedious and feel like re-inventing the squared wheel. In the worst case, the approach produces more overhead compared to using an existing technology.
 
 [Buy the book](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing)
-<!-- •
-[Discuss on Twitter](https://twitter.com/lx_lawrence/status/1341147952195231745) 
--->
+•
+[Discuss on Twitter](https://twitter.com/lx_lawrence/status/1343871960783187968)
