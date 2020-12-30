@@ -82,7 +82,7 @@ The approach Apart from Node."/>
 			
 				<div class="meta">
 					Posted at Dec 29, 2020 &mdash;
-					Reading time: 5 minutes
+					Reading time: 6 minutes
 				</div>
 			
 		</div>
@@ -146,7 +146,26 @@ The approach Apart from Node."/>
 </code></pre></div>
 <p>The class <code>FilesystemRepository</code> is a generic Repository component that can be used as base class for arbitrary Entity types. As constructor arguments, it expects a storage directory as well as custom converter operations. These operations define how Entities are converted to data representations and vice versa. The class <code>BookRepository</code> is an example for a specific Repository that implements the domain-specific query <code>findBooksPublishedAfter()</code>. Apart from a small utility function, the base Repository is identical to the initial version in my book.</p>
 
-<p>Notifications of data changes for filesystem-based storages can be achieved with the Node.js utility <a href="https://nodejs.org/api/fs.html#fs_class_fs_fswatcher"><code>fs.FSWatcher</code></a>. This component utilizes native system mechanisms to watch for filesystem changes, such as inotify on Linux. While it is a powerful abstraction, it is not guaranteed to work for all systems and scenarios. Specifically, it does not work with shared filesystems, such as NFS. Nevertheless, it is a good choice for the illustration of certain concepts, such as event stream subscriptions or inter-process event publishing.</p>
+<p>Notifications of filesystem changes can be achieved with the Node.js utility <a href="https://nodejs.org/api/fs.html#fs_class_fs_fswatcher"><code>fs.FSWatcher</code></a>. This component utilizes native system mechanisms to watch for filesystem events, such as inotify on Linux. While it is a powerful abstraction, it is not guaranteed to work for all systems and scenarios. Specifically, it does not work with shared filesystems, such as NFS. Nevertheless, it is a good choice for the illustration of certain concepts, such as event stream subscriptions or inter-process event publishing.</p>
+
+<p>The following is a simple example for inter-process communication using the filesystem:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">if</span> (cluster.isMaster) cluster.fork();
+
+<span style="color:#ff79c6">const</span> processType <span style="color:#ff79c6">=</span> cluster.isMaster <span style="color:#ff79c6">?</span> <span style="color:#f1fa8c">&#39;master&#39;</span> <span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;worker&#39;</span>;
+
+<span style="color:#ff79c6">const</span> ownInbox <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">`inbox-</span><span style="color:#f1fa8c">${</span>processType<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>;
+<span style="color:#ff79c6">await</span> mkdir(ownInbox, {recursive<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>});
+fs.watch(ownInbox, <span style="color:#ff79c6">async</span> (event, filename) =&gt; {
+  <span style="color:#ff79c6">if</span> (event <span style="color:#ff79c6">!==</span> <span style="color:#f1fa8c">&#39;rename&#39;</span>) <span style="color:#ff79c6">return</span>;
+  <span style="color:#ff79c6">const</span> message <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> fs.promises.readFile(<span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">${</span>ownInbox<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span>filename<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>, <span style="color:#f1fa8c">&#39;utf-8&#39;</span>);
+  console.log(<span style="color:#f1fa8c">`message received in </span><span style="color:#f1fa8c">${</span>processType<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">: </span><span style="color:#f1fa8c">${</span>message<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>);
+});
+
+<span style="color:#ff79c6">await</span> <span style="color:#ff79c6">new</span> <span style="color:#8be9fd;font-style:italic">Promise</span>(resolve =&gt; setTimeout(resolve, <span style="color:#bd93f9">100</span>));
+<span style="color:#ff79c6">const</span> otherInbox <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">`inbox-</span><span style="color:#f1fa8c">${</span>cluster.isMaster <span style="color:#ff79c6">?</span> <span style="color:#f1fa8c">&#39;worker&#39;</span> <span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;master&#39;</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>;
+fs.promises.writeFile(<span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">${</span>otherInbox<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span><span style="color:#8be9fd;font-style:italic">Date</span>.now()<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>, <span style="color:#f1fa8c">`ping from </span><span style="color:#f1fa8c">${</span>processType<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>);
+</code></pre></div>
+<p>The code spawns two independent processes. Each of them starts with creating its own inbox directory. Then, a filesystem watcher is configured to output the content of newly added files. Afterwards, each process writes a file into the inbox directory of the other one. Executing the code will output two messages that are sent across processes. While this example uses the <code>cluster</code> module, the programs could also be spawned in any other way.</p>
 
 <h2 id="why-not-specific-frameworks-or-technologies">Why not specific frameworks or technologies?</h2>
 
