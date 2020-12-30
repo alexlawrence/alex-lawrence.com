@@ -66,7 +66,29 @@ class BookRepository extends FilesystemRepository {
 
 The class `FilesystemRepository` is a generic Repository component that can be used as base class for arbitrary Entity types. As constructor arguments, it expects a storage directory as well as custom converter operations. These operations define how Entities are converted to data representations and vice versa. The class `BookRepository` is an example for a specific Repository that implements the domain-specific query `findBooksPublishedAfter()`. Apart from a small utility function, the base Repository is identical to the initial version in my book.
 
-Notifications of data changes for filesystem-based storages can be achieved with the Node.js utility [`fs.FSWatcher`](https://nodejs.org/api/fs.html#fs_class_fs_fswatcher). This component utilizes native system mechanisms to watch for filesystem changes, such as inotify on Linux. While it is a powerful abstraction, it is not guaranteed to work for all systems and scenarios. Specifically, it does not work with shared filesystems, such as NFS. Nevertheless, it is a good choice for the illustration of certain concepts, such as event stream subscriptions or inter-process event publishing.
+Notifications of filesystem changes can be achieved with the Node.js utility [`fs.FSWatcher`](https://nodejs.org/api/fs.html#fs_class_fs_fswatcher). This component utilizes native system mechanisms to watch for filesystem events, such as inotify on Linux. While it is a powerful abstraction, it is not guaranteed to work for all systems and scenarios. Specifically, it does not work with shared filesystems, such as NFS. Nevertheless, it is a good choice for the illustration of certain concepts, such as event stream subscriptions or inter-process event publishing.
+
+The following is a simple example for inter-process communication using the filesystem:
+
+```javascript
+if (cluster.isMaster) cluster.fork();
+
+const processType = cluster.isMaster ? 'master' : 'worker';
+
+const ownInbox = `inbox-${processType}`;
+await mkdir(ownInbox, {recursive: true});
+fs.watch(ownInbox, async (event, filename) => {
+  if (event !== 'rename') return;
+  const message = await fs.promises.readFile(`${ownInbox}/${filename}`, 'utf-8');
+  console.log(`message received in ${processType}: ${message}`);
+});
+
+await new Promise(resolve => setTimeout(resolve, 100));
+const otherInbox = `inbox-${cluster.isMaster ? 'worker' : 'master'}`;
+fs.promises.writeFile(`${otherInbox}/${Date.now()}`, `ping from ${processType}`);
+```
+
+The code spawns two independent processes. Each of them starts with creating its own inbox directory. Then, a filesystem watcher is configured to output the content of newly added files. Afterwards, each process writes a file into the inbox directory of the other one. Executing the code will output two messages that are sent across processes. While this example uses the `cluster` module, the programs could also be spawned in any other way.
 
 ## Why not specific frameworks or technologies?
 
