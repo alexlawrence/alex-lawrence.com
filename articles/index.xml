@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 Alex Lawrence</copyright>
-    <lastBuildDate>Tue, 29 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.alex-lawrence.com/articles/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Releasing version 1.1.0 of my book</title>
+      <link>https://www.alex-lawrence.com/articles/releasing-version-1-1-0-of-my-book/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.alex-lawrence.com/articles/releasing-version-1-1-0-of-my-book/</guid>
+      <description>Yesterday, I released version 1.1.0 of my book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo;. This release includes various refinements and improvements of the existing book content. Note that if you own a copy and have already started reading, there is no need to start over again.
+Changelog Here is a summary of the changes that have been made:
+ Typo fixes in all chapters Language improvements in all chapters Size reduction of most images Restructuring of Chapter 2, addition of diagram Note addition about further architectural patterns in Chapter 4 Shortening of many code examples Significant shortening of classified ad platform example in Chapter 10 Removal of some irrelevant comments and remarks  Less is more Compared to the previous release of my book (1.</description>
+    </item>
     
     <item>
       <title>Using the filesystem for illustration purposes</title>
