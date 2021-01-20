@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 Alex Lawrence</copyright>
-    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.alex-lawrence.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Domain Modeling by example</title>
+      <link>https://www.alex-lawrence.com/posts/domain-modeling-by-example/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.alex-lawrence.com/posts/domain-modeling-by-example/</guid>
+      <description>This post illustrates a Domain Modeling process using a simple example. As first step, the actual problem is identified. Next, a solution approach is discovered. This is followed by the creation of an initial Domain Model. Afterwards, a first implementation is provided. Then, technical and logical challenges are discussed and solved. Also, the differences between a Domain Model and its implementation are explained. The post ends with a recommendation to use a problem-centric and model-driven approach, even for small projects.</description>
+    </item>
     
     <item>
       <title>Releasing version 1.1.0 of my book</title>
