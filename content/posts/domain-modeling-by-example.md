@@ -141,3 +141,5 @@ There is a difference between a Domain Model and the knowledge an implementation
 Another aspect this post illustrates is that allegedly simple problems can have a lot of complexity to them. Domain-Driven Design and its individual patterns are often recommended for large software projects with rich and complex Domains. However, starting with the problem space and creating a useful conceptual model before going into implementation is always beneficial. Even for a small functionality such as determining vocabulary diversity, a problem-centric and model-driven approach is valuable.
 
 [Buy my book "Implementing DDD, CQRS and Event Sourcing"](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing)
+•
+[Discuss on Twitter](https://twitter.com/lx_lawrence/status/1351998550536810501)
