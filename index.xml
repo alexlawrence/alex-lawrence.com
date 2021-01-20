@@ -14,10 +14,10 @@
     
     <item>
       <title>Releasing version 1.1.0 of my book</title>
-      <link>https://www.alex-lawrence.com/articles/releasing-version-1-1-0-of-my-book/</link>
+      <link>https://www.alex-lawrence.com/posts/releasing-version-1-1-0-of-my-book/</link>
       <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.alex-lawrence.com/articles/releasing-version-1-1-0-of-my-book/</guid>
+      <guid>https://www.alex-lawrence.com/posts/releasing-version-1-1-0-of-my-book/</guid>
       <description>Yesterday, I released version 1.1.0 of my book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo;. This release includes various refinements and improvements of the existing book content. Note that if you own a copy and have already started reading, there is no need to start over again.
 Changelog Here is a summary of the changes that have been made:
  Typo fixes in all chapters Language improvements in all chapters Size reduction of most images Restructuring of Chapter 2, addition of diagram Note addition about further architectural patterns in Chapter 4 Shortening of many code examples Significant shortening of classified ad platform example in Chapter 10 Removal of some irrelevant comments and remarks  Less is more Compared to the previous release of my book (1.</description>
@@ -25,40 +25,40 @@ Changelog Here is a summary of the changes that have been made:
     
     <item>
       <title>Using the filesystem for illustration purposes</title>
-      <link>https://www.alex-lawrence.com/articles/using-the-filesystem-for-illustration-purposes/</link>
+      <link>https://www.alex-lawrence.com/posts/using-the-filesystem-for-illustration-purposes/</link>
       <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.alex-lawrence.com/articles/using-the-filesystem-for-illustration-purposes/</guid>
-      <description>This article describes the approach of using the filesystem for illustrating the implementation of concepts related to persistence and messaging. Some of the explanations are put into the context of my book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo;. The approach is compared to the alternatives of using existing technologies as well as providing pseudo in-memory implementations. At the end, the article outlines the most relevant benefits and implications.
+      <guid>https://www.alex-lawrence.com/posts/using-the-filesystem-for-illustration-purposes/</guid>
+      <description>This post describes the approach of using the filesystem for illustrating the implementation of concepts related to persistence and messaging. Some of the explanations are put into the context of my book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo;. The approach is compared to the alternatives of using existing technologies as well as providing pseudo in-memory implementations. At the end, the post outlines the most relevant benefits and implications.
 The approach Apart from Node.</description>
     </item>
     
     <item>
       <title>Why my book uses Node.js and JavaScript</title>
-      <link>https://www.alex-lawrence.com/articles/why-my-book-uses-nodejs-and-javascript/</link>
+      <link>https://www.alex-lawrence.com/posts/why-my-book-uses-nodejs-and-javascript/</link>
       <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.alex-lawrence.com/articles/why-my-book-uses-nodejs-and-javascript/</guid>
-      <description>This article explains why I chose Node.js as runtime platform and JavaScript as programming language for my book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo;. The described reasons incorporate personal experience, the desired target audience, as well as platform and language characteristics. Also, the benefits and implications of static types are briefly discussed. Finally, the article closes with an outlook of future additions to the existing book.
+      <guid>https://www.alex-lawrence.com/posts/why-my-book-uses-nodejs-and-javascript/</guid>
+      <description>This post explains why I chose Node.js as runtime platform and JavaScript as programming language for my book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo;. The described reasons incorporate personal experience, the desired target audience, as well as platform and language characteristics. Also, the benefits and implications of static types are briefly discussed. Finally, the post closes with an outlook of future additions to the existing book.
 Personal experience One reason for using Node.</description>
     </item>
     
     <item>
       <title>Why I wrote a book on DDD, CQRS and Event Sourcing</title>
-      <link>https://www.alex-lawrence.com/articles/why-i-wrote-a-book-on-ddd-cqrs-and-event-sourcing/</link>
+      <link>https://www.alex-lawrence.com/posts/why-i-wrote-a-book-on-ddd-cqrs-and-event-sourcing/</link>
       <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.alex-lawrence.com/articles/why-i-wrote-a-book-on-ddd-cqrs-and-event-sourcing/</guid>
-      <description>This article explains my motivation for writing a book on DDD, CQRS and Event Sourcing. It starts with outlining how I came in contact with the concepts. Then, it describes how I first applied the patterns accidentally and afterwards worked with them extensively. Finally, it presents the initial book idea, my personal progress throughout the years and the actual result.
+      <guid>https://www.alex-lawrence.com/posts/why-i-wrote-a-book-on-ddd-cqrs-and-event-sourcing/</guid>
+      <description>This post explains my motivation for writing a book on DDD, CQRS and Event Sourcing. It starts with outlining how I came in contact with the concepts. Then, it describes how I first applied the patterns accidentally and afterwards worked with them extensively. Finally, it presents the initial book idea, my personal progress throughout the years and the actual result.
 First contact I first heard of Domain-Driven Design when I worked as a Senior Software Developer at AutoScout24.</description>
     </item>
     
     <item>
       <title>The financial cost of writing a book</title>
-      <link>https://www.alex-lawrence.com/articles/the-financial-cost-of-writing-a-book/</link>
+      <link>https://www.alex-lawrence.com/posts/the-financial-cost-of-writing-a-book/</link>
       <pubDate>Mon, 14 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.alex-lawrence.com/articles/the-financial-cost-of-writing-a-book/</guid>
+      <guid>https://www.alex-lawrence.com/posts/the-financial-cost-of-writing-a-book/</guid>
       <description>One essential question for every potential book author is: What does it financially cost to write a book? Obviously, there is no universal answer to this. Furthermore, in most cases, the goal is to not only cover the cost, but also to earn additional money. In any case, it is important to know what the financial cost of a book project is. Only then, one can decide whether it is worth to do it.</description>
     </item>
     
