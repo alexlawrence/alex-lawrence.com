@@ -2,9 +2,11 @@
 date: 2020-12-29
 keywords: javascript, nodejs, filesystem
 title: Using the filesystem for illustration purposes
+aliases: 
+  - /articles/using-the-filesystem-for-illustration-purposes
 ---
 
-This article describes the approach of using the filesystem for illustrating the implementation of concepts related to persistence and messaging. Some of the explanations are put into the context of my book ["Implementing DDD, CQRS and Event Sourcing"](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing). The approach is compared to the alternatives of using existing technologies as well as providing pseudo in-memory implementations. At the end, the article outlines the most relevant benefits and implications.
+This post describes the approach of using the filesystem for illustrating the implementation of concepts related to persistence and messaging. Some of the explanations are put into the context of my book ["Implementing DDD, CQRS and Event Sourcing"](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing). The approach is compared to the alternatives of using existing technologies as well as providing pseudo in-memory implementations. At the end, the post outlines the most relevant benefits and implications.
 
 ## The approach
 

@@ -3,6 +3,8 @@ date: 2021-01-15
 title: Releasing version 1.1.0 of my book
 description: Release notes for the version 1.1.0 of the book "Implementing DDD, CQRS and Event Sourcing"
 keywords: book, ddd, cqrs, eventsourcing, javascript, nodejs
+aliases: 
+  - /articles/releasing-version-1-1-0-of-my-book
 ---
 
 Yesterday, I released version 1.1.0 of my book ["Implementing DDD, CQRS and Event Sourcing"](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing). This release includes various refinements and improvements of the existing book content. Note that if you own a copy and have already started reading, there is no need to start over again.

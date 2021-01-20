@@ -26,8 +26,8 @@ url = "/resume"
 weight = 2
 
 [[menu.main]]
-name = "Articles"
-url = "/articles"
+name = "Posts"
+url = "/posts"
 weight = 3
 
 [[menu.main]]

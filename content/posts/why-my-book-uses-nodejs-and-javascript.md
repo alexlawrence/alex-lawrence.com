@@ -3,10 +3,10 @@ date: 2020-12-21
 keywords: ddd, cqrs, eventsourcing, javascript, nodejs
 title: Why my book uses Node.js and JavaScript
 aliases: 
-  - /posts/why-my-book-uses-nodejs-and-javascript
+  - /articles/why-my-book-uses-nodejs-and-javascript
 ---
 
-This article explains why I chose Node.js as runtime platform and JavaScript as programming language for my book ["Implementing DDD, CQRS and Event Sourcing"](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing). The described reasons incorporate personal experience, the desired target audience, as well as platform and language characteristics. Also, the benefits and implications of static types are briefly discussed. Finally, the article closes with an outlook of future additions to the existing book.
+This post explains why I chose Node.js as runtime platform and JavaScript as programming language for my book ["Implementing DDD, CQRS and Event Sourcing"](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing). The described reasons incorporate personal experience, the desired target audience, as well as platform and language characteristics. Also, the benefits and implications of static types are briefly discussed. Finally, the post closes with an outlook of future additions to the existing book.
 
 ## Personal experience
 
