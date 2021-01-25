@@ -6,7 +6,7 @@ aliases:
   - /articles/why-i-wrote-a-book-on-ddd-cqrs-and-event-sourcing
 ---
 
-This post explains my motivation for writing a book on DDD, CQRS and Event Sourcing. It starts with outlining how I came in contact with the concepts. Then, it describes how I first applied the patterns accidentally and afterwards worked with them extensively. Finally, it presents the initial book idea, my personal progress throughout the years and the actual result. 
+This post explains my motivation for writing [a book on DDD, CQRS and Event Sourcing](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing). It starts with outlining how I came in contact with the concepts. Then, it describes how I first applied the patterns accidentally and afterwards worked with them extensively. Finally, it presents the initial book idea, my personal progress throughout the years and the actual result. 
 
 ## First contact
 
