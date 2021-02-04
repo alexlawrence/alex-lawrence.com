@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 Alex Lawrence</copyright>
-    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.alex-lawrence.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Releasing Appendix A of my book</title>
+      <link>https://www.alex-lawrence.com/posts/releasing-appendix-a-of-my-book/</link>
+      <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.alex-lawrence.com/posts/releasing-appendix-a-of-my-book/</guid>
+      <description>The latest version of my book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo; includes an appendix on the use of static types. The examples are implemented in TypeScript.
+As next step, I will start to work on another appendix about going into production. There, all exemplary code for persistence and messaging will be replaced with suitable existing technologies.
+Buy the book on Leanpub</description>
+    </item>
     
     <item>
       <title>Domain Modeling by example</title>
