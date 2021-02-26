@@ -130,7 +130,7 @@ console.log(wordOccurrences);
 } */
 ```
 
-The case sensitivity is mitigated by making the input text lowercase. For the merging of singular and plural forms, the implementation introduces the dependency `asSingular`. This argument must be assigned with an operation that takes a word and returns the singular form. As example, the npm module `pluralize` is loaded and its function `singular()` is passed in as dependency. This approach ensures to express the model behavior correctly, while at the same staying free of concrete dependencies.
+The case sensitivity is mitigated by making the input text lowercase. For the merging of singular and plural forms, the implementation introduces the dependency `asSingular`. This argument must be assigned with an operation that takes a word and returns the singular form. As example, the npm module `pluralize` is loaded and its function `singular()` is passed in as dependency. This approach ensures to express the model behavior correctly, while at the same time staying free of concrete dependencies.
 
 ## Model versus code
 
