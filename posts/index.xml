@@ -7,17 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 Alex Lawrence</copyright>
-    <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Feb 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.alex-lawrence.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Releasing Appendix A of my book</title>
-      <link>https://www.alex-lawrence.com/posts/releasing-appendix-a-of-my-book/</link>
+      <title>Releasing Appendix B for my book</title>
+      <link>https://www.alex-lawrence.com/posts/releasing-appendix-b-for-my-book/</link>
+      <pubDate>Fri, 26 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.alex-lawrence.com/posts/releasing-appendix-b-for-my-book/</guid>
+      <description>Today, I released version 1.3.0 of my book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo;.
+This release adds Appendix B: Going into production. The appendix uses EventStoreDB as Event Store, Redis for Read Models, RabbitMQ as Message Bus and NGINX as HTTP proxy.
+Also, this release applies the following changes to the existing content: - add section on frameworks to conclusion part - fix line lengths of various code examples - fix password hashing when changing user password - simplify indexed storage component with partial updates - introduce link to project overview from team management page - shorten note example - replace door locker example with message inbox example - fix missing parts of TypeScript implementation</description>
+    </item>
+    
+    <item>
+      <title>Releasing Appendix A for my book</title>
+      <link>https://www.alex-lawrence.com/posts/releasing-appendix-a-for-my-book/</link>
       <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://www.alex-lawrence.com/posts/releasing-appendix-a-of-my-book/</guid>
+      <guid>https://www.alex-lawrence.com/posts/releasing-appendix-a-for-my-book/</guid>
       <description>The latest version of my book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo; includes an appendix on the use of static types. The examples are implemented in TypeScript.
 As next step, I will start to work on another appendix about going into production. There, all exemplary code for persistence and messaging will be replaced with suitable existing technologies.
 Buy the book on Leanpub</description>

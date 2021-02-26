@@ -208,7 +208,7 @@ console.log(wordOccurrences);
 </span><span style="color:#6272a4">  also: 1, only: 1, one: 1, of: 1, many: 1, possible: 1
 </span><span style="color:#6272a4">} */</span>
 </code></pre></div>
-<p>The case sensitivity is mitigated by making the input text lowercase. For the merging of singular and plural forms, the implementation introduces the dependency <code>asSingular</code>. This argument must be assigned with an operation that takes a word and returns the singular form. As example, the npm module <code>pluralize</code> is loaded and its function <code>singular()</code> is passed in as dependency. This approach ensures to express the model behavior correctly, while at the same staying free of concrete dependencies.</p>
+<p>The case sensitivity is mitigated by making the input text lowercase. For the merging of singular and plural forms, the implementation introduces the dependency <code>asSingular</code>. This argument must be assigned with an operation that takes a word and returns the singular form. As example, the npm module <code>pluralize</code> is loaded and its function <code>singular()</code> is passed in as dependency. This approach ensures to express the model behavior correctly, while at the same time staying free of concrete dependencies.</p>
 
 <h2 id="model-versus-code">Model versus code</h2>
 
