@@ -126,3 +126,5 @@ The type definition `Logger` iterates over the union type `MessageType` and defi
 ## Don't let TypeScript get into your way
 
 TypeScript is a powerful statically typed language. Many times, it is referred to as a "superset of JavaScript". However, for some functionalities, it forces to write code in a specific way. For one, Discriminating Unions influence how destructuring assignments can be used. Furthermore, the lack of partial type inference can necessitate to split up one function into multiple ones. While the benefits of TypeScript likely outweigh its potential downsides, it is still important to be aware of them.
+
+[Discuss on Twitter](https://twitter.com/lx_lawrence/status/1367160115602849804)
