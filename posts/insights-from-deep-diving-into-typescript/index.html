@@ -88,13 +88,13 @@
 		<div class="markdown">
 			
 
-<p>This post summarizes some insights from my deep dive into TypeScript during writing an appendix for <a href="https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing">my book</a>. While I have been working with TypeScript for quite some time, most of the code I encountered was pretty trivial. The majority of the following aspects were new to me and helped me to understand TypeScript better. Also, writing a lot of my book&rsquo;s code again in TypeScript allowed me to identify potential downsides of the tool.</p>
+<p>This post summarizes some insights from my deep dive into TypeScript from when writing an appendix for <a href="https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing">my book</a>. While I have been working with TypeScript for quite some time, most of the code I encountered was pretty trivial. The majority of the following aspects were new to me and helped me to understand TypeScript better. Also, writing a lot of my book&rsquo;s code again in TypeScript allowed me to identify potential downsides of the tool.</p>
 
 <h2 id="class-magic">Class magic</h2>
 
-<p>TypeScript has a special support for the <code>class</code> keyword. For every class within the global scope (of a module), it implicitly defines an instance type with the same name. This enables to write things like <code>const user: User = new User()</code>. However, this mechanism does not work for dynamically created classes or plain constructors. In such cases, the behavior must be emulated with the utility <code>InstanceType</code> and the <code>typeof</code> keyword. Interestingly, <code>export</code> and <code>import</code> statements combine same-named values and types.</p>
+<p>TypeScript has a special support for the <code>class</code> keyword. For every class within the global scope (of a module), it implicitly defines an instance type with the same name. This enables to write things like <code>const user: User = new User()</code>. Unfortunately, this mechanism does not work for dynamically created classes or plain constructors. In such cases, the behavior must be emulated with the utility <code>InstanceType</code> and the keyword <code>typeof</code>. Interestingly, <code>export</code> and <code>import</code> statements combine same-named values and types.</p>
 
-<p>The following code example illustrates this behavior:</p>
+<p>The following code illustrates this behavior:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#ff79c6">class</span> StaticClass {}
 <span style="color:#ff79c6">const</span> a: <span style="color:#8be9fd">StaticClass</span> <span style="color:#6272a4">/* instance type */</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> StaticClass(); <span style="color:#6272a4">/* constructor */</span>
 
@@ -110,9 +110,9 @@ type DynamicClass <span style="color:#ff79c6">=</span> InstanceType<span style="
 
 <h2 id="no-type-inference-for-members">No type inference for members</h2>
 
-<p>For an implementation of an interface, the types of member attributes and member functions could sometimes be inferred. As example, when an interface <code>Logger</code> defines the function <code>log(message: string): void</code>, an implementation <code>ConsoleLogger</code> could just use the signature <code>log(message)</code>. TypeScript could infer that the function parameter is a string and the return value is <code>void</code>. For different reasons, this is currently not supported. All member attributes and member functions must be typed explicitly, independent of interfaces or base classes.</p>
+<p>For some implementations of an interface, the types of member attributes and member functions could be inferred. As example, when the interface <code>Logger</code> defines the function <code>log(message: string): void</code>, the implementation <code>ConsoleLogger</code> could just use the signature <code>log(message)</code>. TypeScript could infer that the function parameter is a string and the return value is <code>void</code>. For different reasons, this is currently not supported. All member attributes and member functions must be typed explicitly, independent of interfaces or base classes.</p>
 
-<p>The following example illustrates the potential repetition due to this necessity:</p>
+<p>The next example illustrates the potential repetition due to this circumstance:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#ff79c6">interface</span> Logger {
   logInfo(message: <span style="color:#8be9fd">String</span>)<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">void</span>;
   logWarning(message: <span style="color:#8be9fd">String</span>)<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">void</span>;
@@ -126,9 +126,9 @@ type DynamicClass <span style="color:#ff79c6">=</span> InstanceType<span style="
 }</code></pre></div>
 <h2 id="no-partial-type-inference">No partial type inference</h2>
 
-<p>TypeScript can infer the types for type parameters from their usage. For example, the function <code>asArray = &lt;T&gt;(item: T) =&gt; [item]</code> can be invoked without defining the type parameter, such as <code>asArray('foo')</code>. In this case, <code>T</code> is inferred to be of type <code>&quot;foo&quot;</code> (which extends <code>string</code>). However, this does not work for multiple type parameters, where only some should be inferred. One possible workaround is to split a function into multiple, with one having all type parameters to be inferred.</p>
+<p>TypeScript can infer the types for type parameters from their usage. For example, the function <code>asArray&lt;T&gt;(item: T) { return [item]; }</code> can be invoked without specifying the type parameter, such as <code>asArray('foo')</code>. In this case, <code>T</code> is inferred to be of type <code>&quot;foo&quot;</code> (which extends <code>string</code>). However, this does not work for multiple type parameters, where only some should be inferred. One possible workaround is to split a function into multiple, with one having all type parameters to infer.</p>
 
-<p>The next code shows a generic function to create object factories with pre-filled data:</p>
+<p>The following code shows a generic function to create object factories with pre-filled data:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#ff79c6">const</span> createFactory1 <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">&lt;</span>R <span style="color:#ff79c6">extends</span> {}, P <span style="color:#ff79c6">extends</span> {}<span style="color:#ff79c6">&gt;</span>(prefilled: <span style="color:#8be9fd">P</span>) <span style="color:#ff79c6">=&gt;</span>
   (required: <span style="color:#8be9fd">R</span>) <span style="color:#ff79c6">=&gt;</span> ({...required, ...prefilled});
 <span style="color:#6272a4">// requires to specify second type parameter, even though it could be inferred
@@ -144,7 +144,7 @@ type DynamicClass <span style="color:#ff79c6">=</span> InstanceType<span style="
 
 <h2 id="discriminating-unions-usage">Discriminating Unions usage</h2>
 
-<p>Discriminating Unions are useful for working with heterogeneous sets of similar items, such as Domain Events. The mechanism allows to distinguish between multiple types using a discriminating field. Every item type uses a specific type for the field that makes it distinct. When processing an item with a union type, its type can be narrowed down based on the discriminating field. One downside of this mechanism is that it demands the code to be written in a specific way.</p>
+<p>Discriminating Unions are useful for working with heterogeneous sets of similar items, such as Domain Events. The mechanism allows to distinguish between multiple types using a discriminating field. Every item type uses a specific type for the field that makes it distinct. When processing an item with a union type, its type can be narrowed down based on the discriminating field. One downside of this mechanism is that it requires the code to be written in a specific way.</p>
 
 <p>The next example compares a JavaScript implementation of an event handler to its TypeScript counterpart with Discriminating Unions:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#6272a4">// JavaScript
@@ -166,11 +166,11 @@ type UserEvent <span style="color:#ff79c6">=</span> UserRegisteredEvent <span st
   <span style="color:#ff79c6">if</span> (event.type <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#39;UserLoggedIn&#39;</span>)
     console.log(<span style="color:#f1fa8c">`user logged in from device: </span><span style="color:#f1fa8c">${</span>event.data.device<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>);
 };</code></pre></div>
-<p>When using TypeScript, a value with a Discriminating Union type cannot be destructured correctly before narrowing down the type.</p>
+<p>When using TypeScript, a value with a Discriminating Union type must not be destructured before narrowing down its type.</p>
 
 <h2 id="template-literal-types">Template Literal types</h2>
 
-<p>Template Literal types are essentially Template Literals on a type level. They can be used to create string literal types that are the result of evaluating a template literal. The article <a href="https://davidtimms.github.io/programming-languages/typescript/2020/11/20/exploring-template-literal-types-in-typescript-4.1.html">&ldquo;Exploring Template Literal Types in TypeScript 4.1&rdquo; by David Timms</a> explains them in detail with advanced examples. One specific use case is the definition of message processing components, where different message types are handled by individual operations.</p>
+<p>Template Literal types are essentially Template Literals on a type level. They can be used to create string literal types that are the result of evaluating a template literal. The article <a href="https://davidtimms.github.io/programming-languages/typescript/2020/11/20/exploring-template-literal-types-in-typescript-4.1.html">&ldquo;Exploring Template Literal Types in TypeScript 4.1&rdquo; by David Timms</a> explains them in greater detail with advanced examples. One notable use case is the definition of message processing components, where individual message types are handled by specific operations.</p>
 
 <p>The following example demonstrates this using the previous logger example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript">type MessageType <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Info&#39;</span> <span style="color:#ff79c6">|</span> <span style="color:#f1fa8c">&#39;Warning&#39;</span> <span style="color:#ff79c6">|</span> <span style="color:#f1fa8c">&#39;Error&#39;</span>;
@@ -188,7 +188,7 @@ type Logger <span style="color:#ff79c6">=</span> {
 
 <h2 id="don-t-let-typescript-get-into-your-way">Don&rsquo;t let TypeScript get into your way</h2>
 
-<p>TypeScript is a powerful statically typed language. Many times, it is referred to as a &ldquo;superset of JavaScript&rdquo;. However, for some functionalities, it forces to write code in a specific way. For one, Discriminating Unions influence how destructuring assignments can be used. Furthermore, the lack of partial type inference can necessitate to split up one function into multiple ones. While the benefits of TypeScript likely outweigh its potential downsides, it is still important to be aware of them.</p>
+<p>TypeScript is a powerful statically typed language. Many times, it is referred to as a &ldquo;superset of JavaScript&rdquo;. However, for some functionalities, it forces to write code in a specific way. For one, Discriminating Unions influence how destructuring assignments can be used. Also, the lack of partial type inference can necessitate to split up one function into multiple ones. While the benefits of TypeScript likely outweigh its potential downsides, it is still important to be aware of them.</p>
 
 <p><a href="https://twitter.com/lx_lawrence/status/1367160115602849804">Discuss on Twitter</a></p>
 

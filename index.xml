@@ -18,7 +18,7 @@
       <pubDate>Wed, 03 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.alex-lawrence.com/posts/insights-from-deep-diving-into-typescript/</guid>
-      <description>This post summarizes some insights from my deep dive into TypeScript during writing an appendix for my book. While I have been working with TypeScript for quite some time, most of the code I encountered was pretty trivial. The majority of the following aspects were new to me and helped me to understand TypeScript better. Also, writing a lot of my book&amp;rsquo;s code again in TypeScript allowed me to identify potential downsides of the tool.</description>
+      <description>This post summarizes some insights from my deep dive into TypeScript from when writing an appendix for my book. While I have been working with TypeScript for quite some time, most of the code I encountered was pretty trivial. The majority of the following aspects were new to me and helped me to understand TypeScript better. Also, writing a lot of my book&amp;rsquo;s code again in TypeScript allowed me to identify potential downsides of the tool.</description>
     </item>
     
     <item>
