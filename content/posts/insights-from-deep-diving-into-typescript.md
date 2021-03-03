@@ -56,14 +56,14 @@ TypeScript can infer the types for type parameters from their usage. For example
 The next code shows a generic function to create object factories with pre-filled data:
 
 ```typescript
-const createFactory1 =
-  <R extends {}, P extends {}>() => (required: R) => ({...required, ...prefilled});
+const createFactory1 = <R extends {}, P extends {}>(prefilled: P) =>
+  (required: R) => ({...required, ...prefilled});
 // requires to specify second type parameter, even though it could be inferred
 const createAdmin1 = createFactory1<{email: string}, {admin: true}>({admin: true});
 const adminUser1 = createAdmin1({email: 'john@example.com'});
 
-const createFactory2 = <R extends {}>() =>
-  <P extends {}>(prefilled: P) => (required: R) => ({...required, ...prefilled});
+const createFactory2 = <R extends {}>() => <P extends {}>(prefilled: P) =>
+  (required: R) => ({...required, ...prefilled});
 // first function specifies type parameter, for second function it is inferred
 const createAdmin2 = createFactory2<{email: string}>()({admin: true});
 const adminUser2 = createAdmin2({email: 'jane@example.com'});
