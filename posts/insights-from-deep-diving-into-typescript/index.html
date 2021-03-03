@@ -92,7 +92,7 @@
 
 <h2 id="class-magic">Class magic</h2>
 
-<p>TypeScript has a special support for the <code>class</code> keyword. For every class within the global scope (of a module), it implicitly defines an instance type with the same name. This enables to write things like <code>const user: User = new User()</code>. Also, <code>export</code> and <code>import</code> statements combine same-named values and types. However, this mechanism does not work for dynamically created classes or plain constructors. In such cases, the behavior must be emulated with the utility <code>InstanceType</code> and the <code>typeof</code> keyword.</p>
+<p>TypeScript has a special support for the <code>class</code> keyword. For every class within the global scope (of a module), it implicitly defines an instance type with the same name. This enables to write things like <code>const user: User = new User()</code>. However, this mechanism does not work for dynamically created classes or plain constructors. In such cases, the behavior must be emulated with the utility <code>InstanceType</code> and the <code>typeof</code> keyword. Interestingly, <code>export</code> and <code>import</code> statements combine same-named values and types.</p>
 
 <p>The following code example illustrates this behavior:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#ff79c6">class</span> StaticClass {}
@@ -106,7 +106,7 @@ type DynamicClass <span style="color:#ff79c6">=</span> InstanceType<span style="
 <span style="color:#ff79c6">const</span> b: <span style="color:#8be9fd">DynamicClass</span> <span style="color:#6272a4">/* instance type */</span> <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> DynamicClass(); <span style="color:#6272a4">/* constructor */</span>
 
 <span style="color:#ff79c6">export</span> {StaticClass, DynamicClass}; <span style="color:#6272a4">/* exports both constructors and types */</span></code></pre></div>
-<p>The statement <code>type X = InstanceType&lt;typeof X&gt;;</code> is logically equivalent to what TypeScript does automatically when encountering the <code>class</code> keyword.</p>
+<p>The statement <code>type X = InstanceType&lt;typeof X&gt;</code> is logically equivalent to what TypeScript does automatically when encountering the <code>class</code> keyword.</p>
 
 <h2 id="no-type-inference-for-members">No type inference for members</h2>
 
@@ -144,7 +144,7 @@ type DynamicClass <span style="color:#ff79c6">=</span> InstanceType<span style="
 
 <h2 id="discriminating-unions-usage">Discriminating Unions usage</h2>
 
-<p>Discriminating Unions are useful for working with a heterogeneous set of similar items, such as Domain Events. The mechanism allows to distinguish between multiple types using a discriminating field. Every item type uses a specific type for the field that makes it distinct. When processing an item with a union type, its type can be narrowed down based on the discriminating field. One downside of this mechanism is that it demands the code to be written in a specific way.</p>
+<p>Discriminating Unions are useful for working with heterogeneous sets of similar items, such as Domain Events. The mechanism allows to distinguish between multiple types using a discriminating field. Every item type uses a specific type for the field that makes it distinct. When processing an item with a union type, its type can be narrowed down based on the discriminating field. One downside of this mechanism is that it demands the code to be written in a specific way.</p>
 
 <p>The next example compares a JavaScript implementation of an event handler to its TypeScript counterpart with Discriminating Unions:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#6272a4">// JavaScript
