@@ -9,7 +9,7 @@ This post summarizes some insights from my deep dive into TypeScript during writ
 
 ## Class magic
 
-TypeScript has a special support for the `class` keyword. For every class within the global scope (of a module), it implicitly defines an instance type with the same name. This enables to write things like `const user: User = new User()`. Also, `export` and `import` statements combine same-named values and types. However, this mechanism does not work for dynamically created classes or plain constructors. In such cases, the behavior must be emulated with the utility `InstanceType` and the `typeof` keyword.
+TypeScript has a special support for the `class` keyword. For every class within the global scope (of a module), it implicitly defines an instance type with the same name. This enables to write things like `const user: User = new User()`. However, this mechanism does not work for dynamically created classes or plain constructors. In such cases, the behavior must be emulated with the utility `InstanceType` and the `typeof` keyword. Interestingly, `export` and `import` statements combine same-named values and types.
 
 The following code example illustrates this behavior:
 
@@ -27,7 +27,7 @@ const b: DynamicClass /* instance type */ = new DynamicClass(); /* constructor *
 export {StaticClass, DynamicClass}; /* exports both constructors and types */
 ```
 
-The statement `type X = InstanceType<typeof X>;` is logically equivalent to what TypeScript does automatically when encountering the `class` keyword.
+The statement `type X = InstanceType<typeof X>` is logically equivalent to what TypeScript does automatically when encountering the `class` keyword.
 
 ## No type inference for members
 
@@ -73,7 +73,7 @@ The function `createFactory1()` requires to specify both type parameters, even t
 
 ## Discriminating Unions usage
 
-Discriminating Unions are useful for working with a heterogeneous set of similar items, such as Domain Events. The mechanism allows to distinguish between multiple types using a discriminating field. Every item type uses a specific type for the field that makes it distinct. When processing an item with a union type, its type can be narrowed down based on the discriminating field. One downside of this mechanism is that it demands the code to be written in a specific way.
+Discriminating Unions are useful for working with heterogeneous sets of similar items, such as Domain Events. The mechanism allows to distinguish between multiple types using a discriminating field. Every item type uses a specific type for the field that makes it distinct. When processing an item with a union type, its type can be narrowed down based on the discriminating field. One downside of this mechanism is that it demands the code to be written in a specific way.
 
 The next example compares a JavaScript implementation of an event handler to its TypeScript counterpart with Discriminating Unions:
 
