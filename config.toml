@@ -31,14 +31,19 @@ url = "/posts"
 weight = 3
 
 [[menu.main]]
-name = "Publications"
-url = "/publications"
+name = "Book"
+url = "/book"
 weight = 4
+
+[[menu.main]]
+name = "Talks"
+url = "/talks"
+weight = 5
 
 [[menu.main]]
 name = "Contact"
 url = "/contact"
-weight = 5
+weight = 6
 
 [[params.social]]
 name = "Github"

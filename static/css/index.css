@@ -89,16 +89,16 @@ h4 {
   column-count: 3;
 }
 
-.book {
+.showcase {
   display: flex;
 }
 
-.book p,
-.book img {
+.showcase p,
+.showcase img {
   margin-top: 0;
 }
 
-.book-cover {
+.showcase-image {
   display: block;
   flex-shrink: 0;
   margin: 0 20px 0 0;
@@ -114,11 +114,11 @@ pre {
     column-count: 2;
   }
 
-  .book {
+  .showcase {
     display: block;
   }
 
-  .book-cover {
+  .showcase-image {
     width: 50%;
   }
 }
