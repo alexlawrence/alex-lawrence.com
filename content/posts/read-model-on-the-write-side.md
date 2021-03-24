@@ -1,5 +1,5 @@
 ---
-date: 2021-03-04
+date: 2021-03-24
 title: Read Model on the write side
 description: "Explanation of why and how Read Models can be useful on the write side"
 keywords: cqrs, read model, write model, eventual consistency
