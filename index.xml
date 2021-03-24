@@ -140,7 +140,7 @@ Software Developer - Personio April 2019 - November 2020
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.alex-lawrence.com/talks/</guid>
-      <description>An introduction to DDD, CQRS and Event Sourcing    This talk gives an introduction to DDD, CQRS and Event Sourcing. It is aimed towards people that have no or limited experience with the topics. The goal is to get a first good understanding of the relevant concepts and patterns. The theoretical parts are complemented with various code examples. Talk Outline:  Domains, Domain Models, Bounded Contexts Software Architecture Code quality Value Objects, Entities, Services Domain Events Aggregates Repositories Application Services CQRS Event Sourcing User Interface   At some point, there will be a separate recording of the talk available online.</description>
+      <description>An introduction to DDD, CQRS and Event Sourcing    This talk gives an introduction to DDD, CQRS and Event Sourcing. It is aimed towards people that have no or limited experience with the topics. The goal is to get a first good understanding of the relevant concepts and patterns. The theoretical parts are complemented with various code examples. Talk Outline:  Domains, Domain Models, Bounded Contexts Software Architecture Code quality Value Objects, Entities, Services Domain Events Aggregates Repositories Application Services CQRS Event Sourcing User Interface   If you&#39;d like me to give the talk on a specific occasion, please contact me.</description>
     </item>
     
   </channel>
