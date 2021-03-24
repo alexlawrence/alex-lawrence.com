@@ -85,3 +85,5 @@ In this case, the synchronization component for the Read Model only reports the 
 Naturally, there are alternative approaches for enforcing a rule that spans across Aggregates. The important part here is to understand that Read Models are not exclusive to the read side of a software.
 
 [Buy my book "Implementing DDD, CQRS and Event Sourcing"](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing)
+•
+[Discuss on Twitter](https://twitter.com/lx_lawrence/status/1374807615503491084)
