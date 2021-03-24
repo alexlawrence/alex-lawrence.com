@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 Alex Lawrence</copyright>
-    <lastBuildDate>Wed, 03 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.alex-lawrence.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Read Model on the write side</title>
+      <link>https://www.alex-lawrence.com/posts/read-model-on-the-write-side/</link>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.alex-lawrence.com/posts/read-model-on-the-write-side/</guid>
+      <description>This post explains why and how Read Models can be useful on the write side of a software. First, the terms CQRS, write side, read side and Read Models are briefly explained. Then, it is discussed how the read side works and why Read Models can also be used in other areas. Next, one common use case for read data on the write side is described. As last part, the whole topic is illustrated with a simplified example.</description>
+    </item>
     
     <item>
       <title>Insights from deep-diving into TypeScript</title>

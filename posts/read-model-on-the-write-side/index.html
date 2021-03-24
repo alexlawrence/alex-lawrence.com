@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Read Model on the write side - Alex Lawrence</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Read Model on the write side" />
+<meta property="og:description" content="Explanation of why and how Read Models can be useful on the write side" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.alex-lawrence.com/posts/read-model-on-the-write-side/" />
+
+
+
+<meta property="article:published_time" content="2021-03-04T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2021-03-04T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Read Model on the write side"/>
+<meta name="twitter:description" content="Explanation of why and how Read Models can be useful on the write side"/>
+<link rel="stylesheet" type="text/css" media="screen" href="https://www.alex-lawrence.com/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://www.alex-lawrence.com/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://www.alex-lawrence.com/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="https://www.alex-lawrence.com/css/dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://www.alex-lawrence.com/js/feather.min.js"></script>
+	
+	<script src="https://www.alex-lawrence.com/js/main.js"></script>
+	<script src="https://www.alex-lawrence.com/js/index.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="https://www.alex-lawrence.com/">
+	<h1 class="site-title"><a href="https://www.alex-lawrence.com/">Alex Lawrence</a></h1>
+	<div class="site-description"><h2>Full-Stack Developer, Technical Lead, Software Architect</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/alexlawrence" title="Github"><i data-feather="github"></i></a><a href="https://twitter.com/lx_lawrence" title="Twitter"><i data-feather="twitter"></i></a><a href="/posts/index.xml" title="RSS"><i data-feather="rss"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Profile</a>
+			</li>
+			
+			<li>
+				<a href="/resume">Resume</a>
+			</li>
+			
+			<li>
+				<a href="/posts">Posts</a>
+			</li>
+			
+			<li>
+				<a href="/book">Book</a>
+			</li>
+			
+			<li>
+				<a href="/talks">Talks</a>
+			</li>
+			
+			<li>
+				<a href="/contact">Contact</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Read Model on the write side</h1>
+			
+				<div class="meta">
+					Posted at Mar 4, 2021 &mdash;
+					Reading time: 4 minutes
+				</div>
+			
+		</div>
+
+		<div class="markdown">
+			
+
+<p>This post explains why and how Read Models can be useful on the write side of a software. First, the terms CQRS, write side, read side and Read Models are briefly explained. Then, it is discussed how the read side works and why Read Models can also be used in other areas. Next, one common use case for read data on the write side is described. As last part, the whole topic is illustrated with a simplified example.</p>
+
+<h2 id="the-many-ways-of-cqrs">The many ways of CQRS</h2>
+
+<p>CQRS is a pattern that separates software into a write side and a read side. The idea is to treat write-related use cases differently from the ones that primarily yield data. However, the concept itself does not dictate any technological decision. Specifically, it does not demand to use separate data storages. Although this is a common setup, it is completely optional. Even the sole use of a caching mechanism or a view in an SQL database are some form of CQRS.</p>
+
+<h2 id="what-is-a-read-model">What is a Read Model?</h2>
+
+<p>A Read Model is a data structure for displaying information that is in some way based on a Write Model. The contained data may be denormalized, derived and even aggregated from multiple sources. Read Models can be expressed as concrete code components, but can also exclusively manifest as structural descriptions. Independent of a specific technological setup, a Read Model should be considered eventually consistent. This means, it must not be excepted to contain the most current state at all times.</p>
+
+<h2 id="read-side-vs-read-model">Read side vs. Read Model</h2>
+
+<p>The read side of a software is responsible for executing read-related use cases. For this purpose, it typically maintains one or more Read Models. When a Query is issued to a responsible handler, the according read data is retrieved and returned. While Read Models are an integral part of a read side, they can also exist on a write side. Even more, there are certain use cases where the write side of a software should maintain its own Read Model.</p>
+
+<h2 id="rules-across-aggregates">Rules across Aggregates</h2>
+
+<p>One use case for a Read Model on the write side is the enforcement of a rule across transactional boundaries. Invariants protect individual Aggregates from entering an invalid state. On top of that, there can also be less critical rules that affect a collection of transactional boundaries. These constraints should normally be satisfied, but may be violated temporarily. For such scenarios, a Read Model can be used to provide the necessary information that is spread across Aggregates.</p>
+
+<h2 id="example-product-reviewers">Example: Product reviewers</h2>
+
+<p>As example, consider a product review functionality of an e-commerce system. The rule is that one customer may only write one review for a single product. If this rule is considered an invariant, it demands that all reviews for a product share the same transactional boundary. Otherwise, it is impossible to satisfy the constraint at all times. However, enclosing all reviews for a product in one Aggregate results in a poor persistence performance and risks concurrency conflicts.</p>
+
+<h3 id="reviewers-read-model">Reviewers Read Model</h3>
+
+<p>An alternative is to accept that the rule can be violated, as long as it is only temporary. This approach demands the ability to detect a violation and to perform a corrective action. Reviews are considered separate Aggregates and the write side can maintain a reviewers Read Model. For each product, there is a list of all customer reviews. When a Command for adding a new review is issued, the Read Model is used to decide whether this action is allowed.</p>
+
+<h3 id="detecting-the-violation">Detecting the violation</h3>
+
+<p>For multiple concurrent review additions from a single customer, the Read Model may not be up to date. In such a case, the &ldquo;one review per customer and product&rdquo; rule can be violated. However, when the Read Model is synchronized, the violation can be detected. At this point, the software can report the issue or trigger a corrective action to remove extraneous reviews. Since a Read Model synchronization is ideally a matter of seconds, the temporary rule violation is negligible.</p>
+
+<p>Here is some pseudo-code to demonstrate how the approach could be implemented:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">class</span> ReviewCommandHandlers {
+
+  #reviewersReadModel; #reviewRepository;
+
+  constructor({reviewersReadModel, reviewRepository}) {
+    <span style="color:#ff79c6">this</span>.#reviewersReadModel <span style="color:#ff79c6">=</span> reviewersReadModel;
+    <span style="color:#ff79c6">this</span>.#reviewRepository <span style="color:#ff79c6">=</span> reviewRepository;
+  } 
+
+  writeReview(command) {
+    <span style="color:#ff79c6">const</span> {productId, reviewId, customerId, rating, comment} <span style="color:#ff79c6">=</span> command.data;
+    <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">this</span>.#reviewersReadModel[productId][customerId])
+      <span style="color:#ff79c6">throw</span> <span style="color:#ff79c6">new</span> <span style="color:#8be9fd;font-style:italic">Error</span>(<span style="color:#f1fa8c">&#39;customer already wrote a review&#39;</span>);
+    <span style="color:#ff79c6">this</span>.#reviewRepository.save(<span style="color:#ff79c6">new</span> Review({id<span style="color:#ff79c6">:</span> reviewId,
+      productId, customerId, rating, comment}));
+  }
+
+}
+</code></pre></div>
+<p>For each new review, the event &ldquo;ReviewWritten&rdquo; is published, which is used to update the Read Model:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">class</span> ReviewersReadModelSynchronization {
+
+  #reviewersReadModel;
+
+  constructor({reviewersReadModel, eventBus}) {
+    <span style="color:#ff79c6">this</span>.#reviewersReadModel <span style="color:#ff79c6">=</span> reviewersReadModel;
+    eventBus.subscribe(<span style="color:#f1fa8c">&#39;ReviewWritten&#39;</span>, <span style="color:#ff79c6">this</span>.handleEvent.bind(<span style="color:#ff79c6">this</span>));
+  } 
+
+  handleEvent(event) {
+    <span style="color:#ff79c6">const</span> {productId, customerId} <span style="color:#ff79c6">=</span> event.data;
+    <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">this</span>.#reviewersReadModel[productId][customerId]) 
+      console.log(<span style="color:#f1fa8c">`customer </span><span style="color:#f1fa8c">${</span>customerId<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> wrote multiple reviews for </span><span style="color:#f1fa8c">${</span>productId<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>);
+    <span style="color:#ff79c6">this</span>.#reviewersReadModel[productId][customerId] <span style="color:#ff79c6">=</span> reviewId;
+  }
+
+}
+</code></pre></div>
+<p>In this case, the synchronization component for the Read Model only reports the rule violation. As mentioned previously, another option is to trigger a corrective action.</p>
+
+<p>Naturally, there are alternative approaches for enforcing a rule that spans across Aggregates. The important part here is to understand that Read Models are not exclusive to the read side of a software.</p>
+
+<p><a href="https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing">Buy my book &ldquo;Implementing DDD, CQRS and Event Sourcing&rdquo;</a></p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+			
+		</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © 2020 Alex Lawrence |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+
+<script>feather.replace()</script>
+</body>
+</html>
