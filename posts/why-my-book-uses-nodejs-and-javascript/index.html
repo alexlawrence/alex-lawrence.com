@@ -143,7 +143,7 @@ Personal experience One reason for using Node."/>
 
 <h2 id="universal-language">Universal language</h2>
 
-<p>My book contains a dedicated chapter on the User Interface part. There, I also use JavaScript for all client-side code. This is because it is natively supported in the browser and probably the most used language for web frontends. There is also some universal infrastructure code that is consumed by both the server and the client. With this approach, the reader only needs to know one language in order to understand both backend and frontend code.</p>
+<p>My book contains a dedicated chapter on the User Interface part. There, I also use JavaScript for all client-side code. This is because it is natively supported in the browser and probably the most used language for web frontends. Furthermore, there is some universal infrastructure code that is consumed by both the server and the client. With this approach, the reader only needs to know one language in order to understand both backend and frontend code.</p>
 
 <h2 id="platform-simplicity">Platform simplicity</h2>
 
@@ -176,11 +176,11 @@ Personal experience One reason for using Node."/>
   request =&gt; <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">${</span>rootDirectory<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">/</span><span style="color:#f1fa8c">${</span>url.parse(request.url).pathname<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>);
 http.createServer(httpFilesystemInterface).listen(<span style="color:#bd93f9">50000</span>);
 </code></pre></div>
-<p>This is not to exemplify that Node.js generally makes things simpler. However, there are many platforms where there is a lot more boilerplate code to it.</p>
+<p>This is not to exemplify that Node.js generally makes things simpler. However, there are many platforms where there is a lot more boilerplate code involved.</p>
 
 <h2 id="concise-and-compact-code">Concise and compact code</h2>
 
-<p>The code examples shown in my book must be compact. Especially in the PDF version, where there is a line length limit of 85 characters. For certain aspects, JavaScript enables to write concise and compact code. Often, this is the case for simple things due to the minimal overhead or ceremony. On top of that, there are certain language constructs that help with keeping code short. Some examples are arrow function expressions, object literals, shorthand property names and destructuring assignments.</p>
+<p>The code examples shown in my book must be compact. Especially in the PDF version, where there is a line length limit of 85 characters. For certain aspects, JavaScript enables to write concise and compact code. Often, this is the case for simple things due to the minimal overhead or ceremony. On top of that, there are certain language constructs that help to keep code short. Some examples are arrow function expressions, object literals, shorthand property names and destructuring assignments.</p>
 
 <p>The below example shows the implementation of a simple Value Object type:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">const</span> Money <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span>({value, currency}) {
@@ -191,7 +191,7 @@ http.createServer(httpFilesystemInterface).listen(<span style="color:#bd93f9">50
 
 <h2 id="what-about-types">What about types?</h2>
 
-<p>JavaScript is a dynamically typed language. Put the other way round, it lacks static typing. This can be either seen as advantage or as shortcoming. With regard to DDD and the modeling of complex domains, it is often a disadvantage. The implementation of a complex Domain Model benefits from static typing and a powerful type system. For the examples in my book, the absence of types is in fact advantageous, as it keeps the code compact.</p>
+<p>JavaScript is a dynamically typed language. Put the other way round, it lacks static typing. This can either be seen as advantage or as shortcoming. With regard to DDD and the modeling of complex domains, it is probably a disadvantage. The implementation of a complex Domain Model benefits from static typing and a powerful type system. For the examples in my book, the absence of types is in fact advantageous, as it keeps the code compact.</p>
 
 <p>As example for the benefits of a powerful static type system, look at the following Domain Model implementation:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript">type Author <span style="color:#ff79c6">=</span> {id: <span style="color:#8be9fd">UUID</span>, firstName: <span style="color:#8be9fd">string</span>, lastName: <span style="color:#8be9fd">string</span>};
