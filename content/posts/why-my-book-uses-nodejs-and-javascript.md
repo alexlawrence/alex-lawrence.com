@@ -62,7 +62,7 @@ This syntax similarity is also given for other programming languages, such as C#
 
 ## Universal language
 
-My book contains a dedicated chapter on the User Interface part. There, I also use JavaScript for all client-side code. This is because it is natively supported in the browser and probably the most used language for web frontends. There is also some universal infrastructure code that is consumed by both the server and the client. With this approach, the reader only needs to know one language in order to understand both backend and frontend code. 
+My book contains a dedicated chapter on the User Interface part. There, I also use JavaScript for all client-side code. This is because it is natively supported in the browser and probably the most used language for web frontends. Furthermore, there is some universal infrastructure code that is consumed by both the server and the client. With this approach, the reader only needs to know one language in order to understand both backend and frontend code. 
 
 ## Platform simplicity
 
@@ -98,11 +98,11 @@ const httpFilesystemInterface = createHttpFilesystemInterface(
 http.createServer(httpFilesystemInterface).listen(50000);
 ```
 
-This is not to exemplify that Node.js generally makes things simpler. However, there are many platforms where there is a lot more boilerplate code to it.
+This is not to exemplify that Node.js generally makes things simpler. However, there are many platforms where there is a lot more boilerplate code involved.
 
 ## Concise and compact code
 
-The code examples shown in my book must be compact. Especially in the PDF version, where there is a line length limit of 85 characters. For certain aspects, JavaScript enables to write concise and compact code. Often, this is the case for simple things due to the minimal overhead or ceremony. On top of that, there are certain language constructs that help with keeping code short. Some examples are arrow function expressions, object literals, shorthand property names and destructuring assignments.
+The code examples shown in my book must be compact. Especially in the PDF version, where there is a line length limit of 85 characters. For certain aspects, JavaScript enables to write concise and compact code. Often, this is the case for simple things due to the minimal overhead or ceremony. On top of that, there are certain language constructs that help to keep code short. Some examples are arrow function expressions, object literals, shorthand property names and destructuring assignments.
 
 The below example shows the implementation of a simple Value Object type:
 
@@ -116,7 +116,7 @@ At first glance, the example may even look overly complex. One could also implem
 
 ## What about types?
 
-JavaScript is a dynamically typed language. Put the other way round, it lacks static typing. This can be either seen as advantage or as shortcoming. With regard to DDD and the modeling of complex domains, it is often a disadvantage. The implementation of a complex Domain Model benefits from static typing and a powerful type system. For the examples in my book, the absence of types is in fact advantageous, as it keeps the code compact.
+JavaScript is a dynamically typed language. Put the other way round, it lacks static typing. This can either be seen as advantage or as shortcoming. With regard to DDD and the modeling of complex domains, it is probably a disadvantage. The implementation of a complex Domain Model benefits from static typing and a powerful type system. For the examples in my book, the absence of types is in fact advantageous, as it keeps the code compact.
 
 As example for the benefits of a powerful static type system, look at the following Domain Model implementation:
 
