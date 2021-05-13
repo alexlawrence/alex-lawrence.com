@@ -134,7 +134,7 @@ The class `InMemoryRepository` is a Repository that stores Entities transiently.
 
 ## All the glitters is not gold
 
-Using the filesystem for illustrating concepts related to persistence or messaging can be beneficial, but also has implications. Ideally, it enables to convey detailed knowledge. Also, it avoids technology preferences, does not require additional knowledge and can prevent overhead. At the same time, utilizing the filesystem for complex topics can feel like re-inventing the squared wheel. In the worst case, it produces more overhead than using an existing technology. Still, for the examples in my book it proved itself useful.
+Using the filesystem for illustrating concepts related to persistence or messaging can be beneficial, but also has implications. Ideally, it enables to convey detailed knowledge. Also, it avoids technology preferences, does not require additional experience and can prevent overhead. At the same time, utilizing the filesystem for complex topics can feel like re-inventing the squared wheel. In the worst case, it produces more overhead than using an existing technology. Still, for the examples in my book it proved itself useful.
 
 [Buy the book](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing)
 •
