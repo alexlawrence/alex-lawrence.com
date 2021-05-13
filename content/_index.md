@@ -4,13 +4,13 @@ type: "page"
 
 I am a software developer with knowledge and experience in architecture, automation, backend, frontend, operations, teaching, technical leadership and testing. Since 2007, my professional focus lies on full-stack web development. 
 
-In most projects, I use JavaScript as language and Node.js as backend runtime. Wherever useful, I apply selected parts of DDD. The architectural patterns I am most interested in are Event-driven Architecture, CQRS and Event Sourcing. For the frontend, I personally favor to use native technologies, such as Web Components. Professionally, I also work with various libraries and tools. 
+In most projects, I use JavaScript or TypeScript as language and Node.js as backend runtime. Wherever useful, I apply selected parts of DDD. The architectural patterns I am most interested in are Event-driven Architecture, CQRS and Event Sourcing. For the frontend, I professionally work with various libraries, such as React or lit-html. Personally, I favor to use native technologies, such as Web Components.
 
-Most recently, I started learning Rust as new programming language and picked up selected concepts of Functional Programming. Since many years, I am a strong supporter for Free/Libre Open Source Software.
+Most recently, I started with Rust and Kotlin as new programming languages and picked up selected concepts of Functional Programming. Since many years, I am a strong supporter for Free/Libre Open Source Software.
 
 ## Availability
 
-* Available from early 2021 for up to 20 hours per week
+* Currently only available for a side project with up to 10 h/w
 * Remote only - Office located in Munich, Germany (GMT+1)
 
 ## Area of work
@@ -36,6 +36,7 @@ Most recently, I started learning Rust as new programming language and picked up
 * CSS
 * HTML
 * JavaScript
+* Kotlin
 * Markdown
 * PHP
 * Rust
@@ -48,18 +49,22 @@ Most recently, I started learning Rust as new programming language and picked up
 
 {{% columned-list %}}
 * Ansible
+* AWS (ECR, S3, SNS, SQS)
 * BabelJS
 * CSS Modules
 * Docker
 * express
+* EventStoreDB
 * Jest
 * jQuery
 * gohugo
 * GNU/Linux
+* gRPC
 * lodash
 * Mocha/Chai
 * Node.js
 * nginx
+* Pact
 * Protractor
 * React
 * redux
@@ -76,9 +81,11 @@ Most recently, I started learning Rust as new programming language and picked up
 
 {{% columned-list %}}
 * Clean Code
-* Command Query Responsibility Segregation
+* CQRS
 * Composition over Inheritance
-* Continuous Delivery & Continuous Integration
+* Consumer-Driven Contracts (CDC)
+* Continuous Delivery
+* Continuous Integration
 * Domain-Driven Design
 * Event Sourcing
 * Event-Driven Architecture
