@@ -22,6 +22,17 @@ Topics: Domain-Driven Design, Command-Query-Responsibility-Segragation, Event So
 
 #### Software Developer - [Personio](https://www.personio.de)
 
+*March 2021 - today*
+
+* Backend Engineering
+* Languages: CSS, flowtype, HTML, JavaScript, TypeScript, SCSS
+* Technologies: Spring Boot, Spring MVC, Spring WebFlux, AWS SNS/SQS, PostgreSQL, Pact, gRPC
+* Designs/Patterns: Microservices, Event-driven Architecture
+
+<hr />
+
+#### Software Developer - [Personio](https://www.personio.de)
+
 *April 2019 - November 2020*
 
 * Global Design/UX improvements
