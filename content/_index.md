@@ -1,4 +1,5 @@
 ---
+title: "Profile"
 type: "page"
 ---
 
