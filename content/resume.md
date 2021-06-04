@@ -20,18 +20,18 @@ Topics: Domain-Driven Design, Command-Query-Responsibility-Segragation, Event So
 
 <hr />
 
-#### Software Developer - [Personio](https://www.personio.de)
+#### Backend Developer - [Personio](https://www.personio.de)
 
 *March 2021 - today*
 
 * Backend Engineering
-* Languages: CSS, flowtype, HTML, JavaScript, TypeScript, SCSS
+* Languages: Kotlin, PHP
 * Technologies: Spring Boot, Spring MVC, Spring WebFlux, AWS SNS/SQS, PostgreSQL, Pact, gRPC
-* Designs/Patterns: Microservices, Event-driven Architecture
+* Designs/Patterns: CQRS, Microservices, Event-driven Architecture
 
 <hr />
 
-#### Software Developer - [Personio](https://www.personio.de)
+#### Full-Stack Developer - [Personio](https://www.personio.de)
 
 *April 2019 - November 2020*
 
@@ -54,7 +54,7 @@ Topics: Domain-Driven Design, Command-Query-Responsibility-Segragation, Event So
 
 <hr />
 
-#### Founder & Developer - [YUNIT](http://www.yunit.org)
+#### Founder & Full-Stack Developer - [YUNIT](http://www.yunit.org)
 
 *May 2013 - May 2018*
 
@@ -94,7 +94,7 @@ Topics: Domain-Driven Design, Command-Query-Responsibility-Segragation, Event So
 
 <hr />
 
-#### Full Stack Developer – [SixSteps](http://sixsteps.com/) / efa GmbH
+#### Full-Stack Developer – [SixSteps](http://sixsteps.com/) / efa GmbH
 
 *April 2014 - September 2016*
 
