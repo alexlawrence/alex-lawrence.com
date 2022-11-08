@@ -118,7 +118,7 @@ First contact I first heard of Domain-Driven Design when I worked as a Senior So
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.alex-lawrence.com/book/</guid>
-      <description>Implementing DDD, CQRS and Event Sourcing    This book explains and illustrates how to implement Domain-Driven Design, Command Query Responsibility Segregation and Event Sourcing. The goal is to build software that is behavior-rich, event-based, problem-centric, reactive, scalable and well-designed.  Domain-Driven Design is a concept that focuses on the problem space and its associated knowledge areas. Command Query Responsibility Segregation separates a software into a write side and a read side.</description>
+      <description>Implementing DDD, CQRS and Event Sourcing    This book explains and illustrates how to implement Domain-Driven Design, Command Query Responsibility Segregation and Event Sourcing. The goal is to build software that is behavior-rich, event-based, problem-centric, reactive, scalable and well-designed.  Domain-Driven Design is a way to build software that focuses on the problem to solve and its associated knowledge areas. Command Query Responsibility Segregation separates a software into a write side and a read side.</description>
     </item>
     
     <item>
@@ -127,7 +127,7 @@ First contact I first heard of Domain-Driven Design when I worked as a Senior So
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.alex-lawrence.com/contact/</guid>
-      <description>QWxleGFuZGVyIExhd3JlbmNlPGJyPlNjaGFyZnJlaXRlcnBsYXR6IDE2PGJyPjgxNTQ5IE11bmljaA== E-Mail: bWFpbEBhbGV4LWxhd3JlbmNlLmNvbQ==</description>
+      <description>QWxleGFuZGVyIExhd3JlbmNlPGJyPktyZWlsbGVyc3RyYcOfZSAxMzRjPGJyPjgxODI1IE11bmljaA== E-Mail: bWFpbEBhbGV4LWxhd3JlbmNlLmNvbQ==</description>
     </item>
     
     <item>
@@ -141,15 +141,6 @@ First contact I first heard of Domain-Driven Design when I worked as a Senior So
 Topics: Domain-Driven Design, Command-Query-Responsibility-Segragation, Event Sourcing, Node.js
 Backend Developer - Personio March 2021 - today
  Backend Engineering Languages: Kotlin, PHP Technologies: Spring Boot, Spring MVC, Spring WebFlux, AWS SNS/SQS, PostgreSQL, Pact, gRPC Designs/Patterns: CQRS, Microservices, Event-driven Architecture  Full-Stack Developer - Personio April 2019 - November 2020</description>
-    </item>
-    
-    <item>
-      <title>Talks</title>
-      <link>https://www.alex-lawrence.com/talks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.alex-lawrence.com/talks/</guid>
-      <description>An introduction to DDD, CQRS and Event Sourcing This talk gives an introduction to DDD, CQRS and Event Sourcing. It is aimed towards people that have no or limited experience with the topics. The goal is to get a first good understanding of the relevant concepts and patterns. The theoretical parts are complemented with various code examples. The overall duration is 3.5 hours (including breaks and Q&amp;amp;A). The talk is not publicly available.</description>
     </item>
     
   </channel>
