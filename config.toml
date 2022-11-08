@@ -36,14 +36,9 @@ url = "/book"
 weight = 4
 
 [[menu.main]]
-name = "Talks"
-url = "/talks"
-weight = 5
-
-[[menu.main]]
 name = "Contact"
 url = "/contact"
-weight = 6
+weight = 5
 
 [[params.social]]
 name = "Github"
