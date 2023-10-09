@@ -17,7 +17,7 @@ Planned and produced a video series around DDD, CQRS, and Event Sourcing for a m
 
 #### Book Author - [Implementing DDD, CQRS and Event Sourcing](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing) (2016 - 2022)
 
-Authored the book "Implementing DDD, CQRS and Event Sourcing" with around 1.000 sold copies.
+Authored the book "Implementing DDD, CQRS and Event Sourcing" with around 900 sold copies.
 
 <hr />
 
