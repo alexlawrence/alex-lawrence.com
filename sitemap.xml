@@ -1,87 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/posts/read-model-on-the-write-side/</loc>
-    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/posts/insights-from-deep-diving-into-typescript/</loc>
-    <lastmod>2021-03-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/posts/releasing-appendix-b-for-my-book/</loc>
-    <lastmod>2021-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/posts/releasing-appendix-a-for-my-book/</loc>
-    <lastmod>2021-02-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/posts/domain-modeling-by-example/</loc>
-    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/posts/releasing-version-1-1-0-of-my-book/</loc>
-    <lastmod>2021-01-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/posts/using-the-filesystem-for-illustration-purposes/</loc>
-    <lastmod>2020-12-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/posts/why-my-book-uses-nodejs-and-javascript/</loc>
-    <lastmod>2020-12-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/posts/why-i-wrote-a-book-on-ddd-cqrs-and-event-sourcing/</loc>
-    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/posts/the-financial-cost-of-writing-a-book/</loc>
-    <lastmod>2020-12-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/book/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.alex-lawrence.com/contact/</loc>
-  </url>
-  
   <url>
     <loc>https://www.alex-lawrence.com/posts/</loc>
     <lastmod>2021-03-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.alex-lawrence.com/</loc>
     <lastmod>2021-03-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/posts/read-model-on-the-write-side/</loc>
+    <lastmod>2021-03-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/posts/insights-from-deep-diving-into-typescript/</loc>
+    <lastmod>2021-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/posts/releasing-appendix-b-for-my-book/</loc>
+    <lastmod>2021-02-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/posts/releasing-appendix-a-for-my-book/</loc>
+    <lastmod>2021-02-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/posts/domain-modeling-by-example/</loc>
+    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/posts/releasing-version-1-1-0-of-my-book/</loc>
+    <lastmod>2021-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/posts/using-the-filesystem-for-illustration-purposes/</loc>
+    <lastmod>2020-12-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/posts/why-my-book-uses-nodejs-and-javascript/</loc>
+    <lastmod>2020-12-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/posts/why-i-wrote-a-book-on-ddd-cqrs-and-event-sourcing/</loc>
+    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/posts/the-financial-cost-of-writing-a-book/</loc>
+    <lastmod>2020-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/book/</loc>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/categories/</loc>
+  </url><url>
+    <loc>https://www.alex-lawrence.com/contact/</loc>
+  </url><url>
     <loc>https://www.alex-lawrence.com/resume/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.alex-lawrence.com/tags/</loc>
-    <priority>0</priority>
   </url>
-  
 </urlset>

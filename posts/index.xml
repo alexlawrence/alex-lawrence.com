@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Alex Lawrence</title>
@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 Alex Lawrence</copyright>
-    <lastBuildDate>Wed, 24 Mar 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.alex-lawrence.com/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 24 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.alex-lawrence.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Read Model on the write side</title>
       <link>https://www.alex-lawrence.com/posts/read-model-on-the-write-side/</link>

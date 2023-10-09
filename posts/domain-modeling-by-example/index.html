@@ -6,22 +6,9 @@
 	<meta property="og:title" content="Domain Modeling by example" />
 <meta property="og:description" content="This post illustrates a Domain Modeling process using a simple example." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.alex-lawrence.com/posts/domain-modeling-by-example/" />
-
-
-
-<meta property="article:published_time" content="2021-01-20T00:00:00&#43;00:00"/>
-
-<meta property="article:modified_time" content="2021-01-20T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
+<meta property="og:url" content="https://www.alex-lawrence.com/posts/domain-modeling-by-example/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-20T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Domain Modeling by example"/>
@@ -42,7 +29,7 @@
 		<div class="header">
 	<base href="https://www.alex-lawrence.com/">
 	<h1 class="site-title"><a href="https://www.alex-lawrence.com/">Alex Lawrence</a></h1>
-	<div class="site-description"><h2>Full-Stack Developer, Technical Lead, Software Architect</h2><nav class="nav social">
+	<div class="site-description"><h2>Coding Architect, Technical Lead, Author</h2><nav class="nav social">
 			<ul class="flat"><a href="https://github.com/alexlawrence" title="Github"><i data-feather="github"></i></a><a href="https://twitter.com/lx_lawrence" title="Twitter"><i data-feather="twitter"></i></a><a href="/posts/index.xml" title="RSS"><i data-feather="rss"></i></a></ul>
 		</nav>
 	</div>
@@ -86,41 +73,26 @@
 		</div>
 
 		<div class="markdown">
-			
-
-<p>This post illustrates a Domain Modeling process using a simple example. As first step, the actual problem is identified. Next, a solution approach is discovered. This is followed by the creation of an initial Domain Model. Afterwards, a first implementation is provided. Then, technical and logical challenges are discussed and solved. Also, the differences between a Domain Model and its implementation are explained. The post ends with a recommendation to use a problem-centric and model-driven approach, even for small projects.</p>
-
+			<p>This post illustrates a Domain Modeling process using a simple example. As first step, the actual problem is identified. Next, a solution approach is discovered. This is followed by the creation of an initial Domain Model. Afterwards, a first implementation is provided. Then, technical and logical challenges are discussed and solved. Also, the differences between a Domain Model and its implementation are explained. The post ends with a recommendation to use a problem-centric and model-driven approach, even for small projects.</p>
 <h2 id="problem-identification">Problem identification</h2>
-
 <p>Domain-Driven Design puts emphasis on the problems to solve and its involved knowledge areas. In <a href="https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing">my book</a>, a Domain Model is defined as &ldquo;set of knowledge abstractions that is focused on [..] solving specific problems&rdquo;. This means, in order to create a useful model, one needs to identify the problems first. As specific example, consider the following problem I encountered during the time when I was working on my book: <strong>I want to know the occurrences of individual words in a text.</strong></p>
-
 <p>At first, this statement seems useful. However, it is not really describing a problem, but already implying a specific solution. The relevant question is: What problem was I trying to solve with counting the occurrences of individual words? As I am not a native speaker, I am generally unsure about the diversity of my vocabulary. I wanted to somehow measure this aspect. Therefore, the real problem to solve that I had was to <strong>determine the vocabulary diversity of a text</strong>.</p>
-
 <h2 id="solution-approach">Solution approach</h2>
-
 <p>With the problem identified, one can decide on specific solution approaches. In my case, I was already settled on one. The idea was that I&rsquo;d be able to determine the vocabulary diversity by looking at the occurrences of individual words. However, this approach implied that the software part alone is not a complete solution. Rather, it would only generate data that helps to derive indications of vocabulary use. Determining the actual diversity would be done by me as the user.</p>
-
 <h2 id="initial-domain-model">Initial Domain model</h2>
-
 <p>As mentioned previously, a Domain Model is a set of knowledge abstractions. Therefore, it does not have to have a specific manifestation or representation. Even more, while a model is commonly expressed in some way, the individual artifacts are often only subsets of information. For the vocabulary example, the knowledge abstractions can be conveyed through plain text. Note that this approach does not make any statement towards the complexity of the problem or the Domain Model.</p>
-
 <p>The goal is to determine the degree of vocabulary diversity in a text. &ldquo;Text&rdquo; stands for a collection of words together with punctuation marks. &ldquo;Vocabulary&rdquo; can be defined as set of individual words. The term &ldquo;diversity&rdquo; incorporates the appearance of distinct words and their occurrences. The expression &ldquo;degree&rdquo; implies bounds and discrete steps between them. For the example, the vocabulary diversity is assumed to be a subjective metric that cannot be computed through software.</p>
-
 <p>Altogether, the resulting Domain Model aspects can be summarized with the following points:</p>
-
 <ul>
 <li>given a text, the vocabulary diversity should be determined</li>
 <li>a text is a collection of words and punctuation marks</li>
 <li>a vocabulary is a set of individual words</li>
 <li>vocabulary diversity is a subjective metric that is determined manually</li>
 </ul>
-
 <h2 id="first-implementation">First implementation</h2>
-
 <p>After having the Domain Model defined, the implementation can be started. For the example, an iterative software development process is assumed. As a consequence, there are lower requirements in terms of completeness and correctness for the Domain Model. Rather, the above definition can be seen as initial draft that evolves further. Another way to understand it is that the following iterations are part of an experimentation phase without building production software.</p>
-
 <p>The following code is the first implementation for counting the occurrences of individual words in a text:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">const</span> countWordOccurrences <span style="color:#ff79c6">=</span> text =&gt; {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">const</span> countWordOccurrences <span style="color:#ff79c6">=</span> text =&gt; {
   wordOccurrences <span style="color:#ff79c6">=</span> {};
   text.split(<span style="color:#f1fa8c">&#39; &#39;</span>).forEach(word =&gt; {
     <span style="color:#ff79c6">if</span> (wordOccurrences[word] <span style="color:#ff79c6">==</span> <span style="color:#ff79c6">null</span>) wordOccurrences[word] <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
@@ -137,15 +109,11 @@ console.log(wordOccurrences);
 </span><span style="color:#6272a4">  This: 1, is: 2, a: 1, basic: 1, &#39;example.\n&#39;: 1, &#39;&#39;: 1, &#39;Also,&#39;: 1,
 </span><span style="color:#6272a4">  this: 1, only: 1, one: 1, of: 1, many: 1, possible: 1, &#39;examples.&#39;: 1
 </span><span style="color:#6272a4">} */</span>
-</code></pre></div>
-<p>The exemplary usage and its output demonstrate the capabilities of the initial solution.</p>
-
+</code></pre></div><p>The exemplary usage and its output demonstrate the capabilities of the initial solution.</p>
 <h2 id="technical-issues">Technical issues</h2>
-
 <p>There are some technical issues with the first implementation. These aspects are not due to flaws in the model, but related to correctly integrating implicit requirements into the code. One problem is that punctuation marks are mistakenly considered as part of a word. The same is true for newline characters. Another issue is that multiple whitespaces cause to create empty word entries. These aspects are ill-suited as explicit parts of the model, as they should be seen as common sense.</p>
-
 <p>The following code provides a reworked implementation that overcomes the mentioned issues:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">const</span> wordRegex <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">/[a-z0-9]{1}[a-z0-9-]*/gi</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">const</span> wordRegex <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">/[a-z0-9]{1}[a-z0-9-]*/gi</span>;
 
 <span style="color:#ff79c6">const</span> countWordOccurrences <span style="color:#ff79c6">=</span> text =&gt; {
   wordOccurrences <span style="color:#ff79c6">=</span> {};
@@ -164,15 +132,10 @@ console.log(wordOccurrences);
 </span><span style="color:#6272a4">  This: 1, is: 2, a: 1, basic: 1, example: 1, Also: 1, this: 1,
 </span><span style="color:#6272a4">  only: 1, one: 1, of: 1, many: 1, possible: 1, examples: 1
 </span><span style="color:#6272a4">} */</span>
-</code></pre></div>
-<p>The second variant solves the mentioned technical issues by using a regular expression. This expression defines two rules. For one, every word must start with an alphanumerical character. Secondly, the first character can be followed by an arbitrary combination of alphanumerical characters and dashes.</p>
-
+</code></pre></div><p>The second variant solves the mentioned technical issues by using a regular expression. This expression defines two rules. For one, every word must start with an alphanumerical character. Secondly, the first character can be followed by an arbitrary combination of alphanumerical characters and dashes.</p>
 <h2 id="model-refinements">Model refinements</h2>
-
 <p>The reworked implementation is an improvement, but still faces issues. There are problems that hint to flaws in the Domain Model. One is that the implementation is case-sensitive, which causes multiple entries for identical words with different casing. Another issue is that the singular and the plural form of one word are considered different things. Unlike the technical issues, these aspects should be explicit model parts. This is because they may be treated differently, depending on the problem statement.</p>
-
 <p>The Domain Model definition can be updated as follows:</p>
-
 <ul>
 <li>given a text, the vocabulary diversity should be determined</li>
 <li>a text is a collection of words and punctuation marks</li>
@@ -181,9 +144,8 @@ console.log(wordOccurrences);
 <li>different casings of one word are considered the same</li>
 <li>singular and plural of one word are considered the same</li>
 </ul>
-
 <p>The final example provides an implementation that reflects the latest Domain Model:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">const</span> wordRegex <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">/[a-z0-9]{1}[a-z0-9-]*/gi</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ff79c6">const</span> wordRegex <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">/[a-z0-9]{1}[a-z0-9-]*/gi</span>;
 
 <span style="color:#ff79c6">const</span> countWordOccurrences <span style="color:#ff79c6">=</span> (text, {asSingular}) =&gt; {
   wordOccurrences <span style="color:#ff79c6">=</span> {};
@@ -207,17 +169,11 @@ console.log(wordOccurrences);
 </span><span style="color:#6272a4">  this: 2, is: 2, a: 1, basic: 1, example: 2,
 </span><span style="color:#6272a4">  also: 1, only: 1, one: 1, of: 1, many: 1, possible: 1
 </span><span style="color:#6272a4">} */</span>
-</code></pre></div>
-<p>The case sensitivity is mitigated by making the input text lowercase. For the merging of singular and plural forms, the implementation introduces the dependency <code>asSingular</code>. This argument must be assigned with an operation that takes a word and returns the singular form. As example, the npm module <code>pluralize</code> is loaded and its function <code>singular()</code> is passed in as dependency. This approach ensures to express the model behavior correctly, while at the same time staying free of concrete dependencies.</p>
-
+</code></pre></div><p>The case sensitivity is mitigated by making the input text lowercase. For the merging of singular and plural forms, the implementation introduces the dependency <code>asSingular</code>. This argument must be assigned with an operation that takes a word and returns the singular form. As example, the npm module <code>pluralize</code> is loaded and its function <code>singular()</code> is passed in as dependency. This approach ensures to express the model behavior correctly, while at the same time staying free of concrete dependencies.</p>
 <h2 id="model-versus-code">Model versus code</h2>
-
 <p>There is a difference between a Domain Model and the knowledge an implementation expresses. Consider the following excerpt from <a href="https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing">my book</a>: &ldquo;An actual implementation may only reflect a subset of the underlying abstractions, and eventually deals with extraneous technical aspects.&rdquo; The vocabulary diversity example illustrates both statements. For one, the implementation does not express the full model, as it exclusively counts occurrences per individual word. Secondly, it also deals with purely technical issues such as multiple whitespaces or newline characters.</p>
-
 <h2 id="ddd-for-small-problems">DDD for small problems</h2>
-
 <p>Another aspect this post illustrates is that allegedly simple problems can have a lot of complexity to them. Domain-Driven Design and its individual patterns are often recommended for large software projects with rich and complex Domains. However, starting with the problem space and creating a useful conceptual model before going into implementation is always beneficial. Even for a small functionality such as determining vocabulary diversity, a problem-centric and model-driven approach is valuable.</p>
-
 <p><a href="https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing">Buy my book &ldquo;Implementing DDD, CQRS and Event Sourcing&rdquo;</a>
 •
 <a href="https://twitter.com/lx_lawrence/status/1351998550536810501">Discuss on Twitter</a></p>

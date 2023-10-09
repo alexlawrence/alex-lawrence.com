@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Alex Lawrence</title>
@@ -6,10 +6,6 @@
     <description>Recent content in Categories on Alex Lawrence</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2020 Alex Lawrence</copyright>
-    
-	<atom:link href="https://www.alex-lawrence.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>© 2020 Alex Lawrence</copyright><atom:link href="https://www.alex-lawrence.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

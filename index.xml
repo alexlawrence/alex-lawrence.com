@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Profile on Alex Lawrence</title>
@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020 Alex Lawrence</copyright>
-    <lastBuildDate>Wed, 24 Mar 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://www.alex-lawrence.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 24 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.alex-lawrence.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Read Model on the write side</title>
       <link>https://www.alex-lawrence.com/posts/read-model-on-the-write-side/</link>
@@ -118,7 +114,7 @@ First contact I first heard of Domain-Driven Design when I worked as a Senior So
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.alex-lawrence.com/book/</guid>
-      <description>Implementing DDD, CQRS and Event Sourcing    This book explains and illustrates how to implement Domain-Driven Design, Command Query Responsibility Segregation and Event Sourcing. The goal is to build software that is behavior-rich, event-based, problem-centric, reactive, scalable and well-designed.  Domain-Driven Design is a way to build software that focuses on the problem to solve and its associated knowledge areas. Command Query Responsibility Segregation separates a software into a write side and a read side.</description>
+      <description>Implementing DDD, CQRS and Event Sourcing </description>
     </item>
     
     <item>
@@ -127,7 +123,7 @@ First contact I first heard of Domain-Driven Design when I worked as a Senior So
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.alex-lawrence.com/contact/</guid>
-      <description>QWxleGFuZGVyIExhd3JlbmNlPGJyPktyZWlsbGVyc3RyYXNzZSAxMzRjPGJyPjgxODI1IE11bmljaA== E-Mail: bWFpbEBhbGV4LWxhd3JlbmNlLmNvbQ==</description>
+      <description>E-Mail: bWFpbEBhbGV4LWxhd3JlbmNlLmNvbQ==</description>
     </item>
     
     <item>
@@ -136,11 +132,10 @@ First contact I first heard of Domain-Driven Design when I worked as a Senior So
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.alex-lawrence.com/resume/</guid>
-      <description>Full-Stack Developer, Technical Lead, Software Architect – Alex Lawrence December 2013 - today
- Freelance work as Full-Stack Developer, Technical Lead, Software Architect and Consultant Open-Source Projects on Github  Book Author - Implementing DDD, CQRS and Event Sourcing December 2016 - today
-Topics: Domain-Driven Design, Command-Query-Responsibility-Segragation, Event Sourcing, Node.js
-Backend Developer - Personio March 2021 - today
- Backend Engineering Languages: Kotlin, PHP Technologies: Spring Boot, Spring MVC, Spring WebFlux, AWS SNS/SQS, PostgreSQL, Pact, gRPC Designs/Patterns: CQRS, Microservices, Event-driven Architecture  Full-Stack Developer - Personio April 2019 - November 2020</description>
+      <description>Book Author (2022 - now) Currently authoring a book on message-driven systems with a renowned US publisher.
+Content Creator - Hochschule Zwickau (2021 - 2022) Planned and produced a video series around DDD, CQRS, and Event Sourcing for a master studies course.
+Book Author - Implementing DDD, CQRS and Event Sourcing (2016 - 2022) Authored the book &amp;ldquo;Implementing DDD, CQRS and Event Sourcing&amp;rdquo; with around 1.000 sold copies.
+Technical Lead, Sofware Architect Personio (2021 - 2023) Co-architected and built critical part of payroll product with a bi-temporal domain model based on events.</description>
     </item>
     
   </channel>
