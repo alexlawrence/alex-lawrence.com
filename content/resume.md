@@ -3,185 +3,134 @@ title: "Resume"
 type: "page"
 ---
 
-#### Full-Stack Developer, Technical Lead, Software Architect – [Alex Lawrence](http://alex-lawrence.com/)
+#### Book Author (2022 - now)
 
-*December 2013 - today*
-
-- Freelance work as Full-Stack Developer, Technical Lead, Software Architect and Consultant
-- Open-Source Projects on [Github](https://github.com/alexlawrence)
+Currently authoring a book on message-driven systems with a renowned US publisher.
 
 <hr />
 
-#### Book Author - [Implementing DDD, CQRS and Event Sourcing](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing)
+#### Content Creator - Hochschule Zwickau (2021 - 2022)
 
-*December 2016 - today*
-
-Topics: Domain-Driven Design, Command-Query-Responsibility-Segragation, Event Sourcing, Node.js
+Planned and produced a video series around DDD, CQRS, and Event Sourcing for a master studies course.
 
 <hr />
 
-#### Backend Developer - [Personio](https://www.personio.de)
+#### Book Author - [Implementing DDD, CQRS and Event Sourcing](https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing) (2016 - 2022)
 
-*March 2021 - today*
-
-* Backend Engineering
-* Languages: Kotlin, PHP
-* Technologies: Spring Boot, Spring MVC, Spring WebFlux, AWS SNS/SQS, PostgreSQL, Pact, gRPC
-* Designs/Patterns: CQRS, Microservices, Event-driven Architecture
+Authored the book "Implementing DDD, CQRS and Event Sourcing" with around 1.000 sold copies.
 
 <hr />
 
-#### Full-Stack Developer - [Personio](https://www.personio.de)
+#### Technical Lead, Sofware Architect [Personio](https://www.personio.de) (2021 - 2023)
 
-*April 2019 - November 2020*
-
-* Global Design/UX improvements
-* Full-Stack Feature Development
-* Maintainer of Design System & UI Library
-* Consultant for CQRS, DDD, Event-driven Architecture and Event Sourcing
-* Languages: CSS, flowtype, HTML, JavaScript, TypeScript, SCSS
-* Technologies: CSS Modules, Jest, JSX, React (+ Testing Library), redux, redux-saga, Webpack
+Co-architected and built critical part of payroll product with a bi-temporal domain model.
+Supported with building initial version of system-wide platform to facilitate data replication through Event-carried State Transfer.
+Authored and reviewed numerous design documents for critical architectural changes.
+Acted as technical lead, mentor, and multiplier for other engineers.
 
 <hr />
 
-#### Frontend Developer - [AutoScout24 GmbH](http://www.autoscout24.de)
+#### Developer, Frontend Architect, Consultant - [Personio](https://www.personio.de) (2019 - 2020)
 
-*November 2018 - March 2019*
-
-* Frontend Development, A/B Testing
-* Languages: CSS3, JavaScript, HTML5, Scala
-* Technologies: AWS, Docker, Jest, Optimizely, React, redux
-
-<hr />
-
-#### Founder & Full-Stack Developer - [YUNIT](http://www.yunit.org)
-
-*May 2013 - May 2018*
-
-* Full-Stack Development, Software Architecture, Operations
-* Customer-focused development following Lean Startup Approach
-* Languages: CSS3, HTML5, JavaScript
-* Technologies: Bootstrap, DOM, Docker, express, Jade, Jasmine, Jenkins, jQuery, LESS, MongoDB, mongoose, Node.js
+Started with working on global design and UX improvements.
+Continued with implementing first Micro-Frontends.
+Supported with full-stack feature development in the recruiting area.
+Joined separate team to build initial version of a design system.
+Repeatedly consulted on Event-Driven Architecture, DDD, CQRS, and Event Sourcing.
 
 <hr />
 
-#### Full-Stack Developer - [AutoScout24 GmbH](http://www.autoscout24.de)
+#### Frontend Developer - [AutoScout24 GmbH](http://www.autoscout24.de) (2018 - 2019)
 
-*July 2017 - March 2018*
-
-* Frontend Development, Development of project template and tools for static websites on S3
-* Languages: CSS3, JavaScript, ES.next, HTML5, Scala, SCSS
-* Technologies: AWS, Docker, Hugo, Node.js, nginx, SSI, Shell/Bash
+Implemented frontend parts for various smaller features.
+Heavily utilized A/B testing to find optimal solutions.
 
 <hr />
 
-#### Frontend Developer - [nuveon GmbH](http://nuveon.de/)
+#### Founder, Software Arhitect, Developer - [YUNIT](http://www.yunit.org) (2013 - 2018)
 
-*May 2017 - August 2017*
-
-* Refactoring and extension of existing SCSS codebase and templates
-* Languages: CSS3, JavaScript, JSP, HTML5, SCSS
-
-<hr />
-
-#### Frontend Developer - [frog design](http://www.frogdesign.com)
-
-*December 2016 - January 2017*
-
-* Development of UI Library
-* Languages: CSS3, HTML5, SCSS, TypeScript
-* Technologies: AngularJS 1.5, dgeni, Gulp, Jasmine, Karma, Node.js, RequireJS
+Founded a small startup and built a mouse tracking tool as a german competitor to products such as Mouseflow.
+Responsible for the software architecture, backend development, and operations.
+Followed the Lean Startup approach to identify customers and problems to solve.
 
 <hr />
 
-#### Full-Stack Developer – [SixSteps](http://sixsteps.com/) / efa GmbH
+#### Full-Stack Developer - [AutoScout24 GmbH](http://www.autoscout24.de) (2017 - 2018)
 
-*April 2014 - September 2016*
-
-* Full-Stack Development & Software Architecture for web-based meeting software
-* Architectural patterns & styles: DDD, CQRS, Event Sourcing, Microservices
-* Methodologies: DDD, TDD/BDD, Refactoring, Kanban, Extreme Programming
-* Languages: CSS3, CoffeScript, HTML5, SCSS
-* Technologies: AngularJS, Ansible, Docker, express, eventric, Gulp, Jenkins, Karma, Mocha, Node.js, Protractor, SinonJS, socket.io
+Developed templates and tools for building large SEO websites hosted on AWS.
+Closely collaborated with SEO experts to build optimal solution without later development efforts.
 
 <hr />
 
-#### Lecturer at University of Augsburg
+#### Frontend Developer - [frog design](http://www.frogdesign.com) (2016 - 2017)
 
-*January 2014 - July 2016*
-
-Lecturer for the subject "Multimedia Programming" in the third semester of the studies "Interactive Media".
-Focus: Browser based programming with JavaScript
+Co-architected and developed a UI component library for a client project.
+Closely collaborated with product designers to deliver high-quality UX.
 
 <hr />
 
-#### Frontend Developer - [frog design](http://www.frogdesign.com)
+#### Software Architect & Developer – [SixSteps](http://sixsteps.com/) / efa GmbH (2014 - 2016)
 
-*January 2014 - March 2014*
-
-* Development of showcase prototype on top of existing Web Application
-* Languages: CSS3, HTML5, JavaScript
-* Technologies: AngularJS, Express, Grunt, jQuery, NodeJS, socket.io, WebRTC, Websockets
-
-<hr />
-
-#### (Senior) Software Developer - [AutoScout24 GmbH](http://www.autoscout24.de)
-
-*March 2011 - August 2013*
-
-* Technical Leadership and Coaching in Frontend Development
-* Technical Leadership and coordination of interdisciplinary frontend group
-* Development of company-wide used modular UI Library (similar to Bootstrap)
-* Push towards modularization, testing and coding standards for JavaScript
-* Customer- and value-driven development
-* Languages: CSS, C#, HTML5, JavaScript, SCSS, SQL
-* Technologies: AMD, ASP.NET MVC, Jasmine, jQuery, KnockoutJS, MSpec, Rake, REST
+Built a web-based meeting software for effective on-site and remote meetings.
+Applied strategic and tactical DDD patterns to build an optimal product for moderators and participants.
+Co-architected and developed an event-driven system that in parts utilized CQRS & Event Sourcing.
+Developed a web-based component library and a reactive frontend for the product.
+Supported operations with containerization and orchestration.
 
 <hr />
 
-#### Working Student Software Development - [AutoScout24 GmbH](http://www.autoscout24.de)
+#### Lecturer at University of Augsburg (2014 - 2015)
 
-*July 2010 - February 2011*
-
-* Refactoring and modularization of existing CSS codebase
-* Support for the improvement of frontend development
-* Languages: CSS, C#, HTML, JavaScript
-* Technologies: ASP.NET Web Forms, jQuery
+Lecturer for the subject "Multimedia Programming" in the third semester of the studies "Interactive Media". Covered topics: JavaScript fundamentals, web technologies, essential design patterns.
 
 <hr />
 
-#### Head of Development / Partner - [artecho GbR](http://www.artecho.de)
+#### Frontend Developer - [frog design](http://www.frogdesign.com) (2014)
 
-*October 2008 - July 2010*
-
-* Development of software solutions for more than 30 clients
-* Languages: C++, PHP, XHTML/CSS/JS
-* Technologies: Drupal 6, jQuery, Ubercart
+Developed showcase prototype on top of existing web application.
+Pushed technical boundaries of WebRTC possibilities, connecting browsers and iOS clients.
 
 <hr />
 
-#### Tutor for different subjects - [Hochschule Augsburg](http://www.hs-augsburg.de)
+#### Senior Software Developer - [AutoScout24 GmbH](http://www.autoscout24.de) (2011 - 2013)
 
-*October 2006 - July 2010*
-
-Subjects: ActionScript3, Flex, Java/J2SE, PostgreSQL
-
-<hr />
-
-#### Web Developer - Alex Lawrence
-
-*October 2006 - October 2008*
-
-* Development of web-based software solutions for 15 clients
-* Languages: ActionScript, CSS, HTML, PHP
+Full-Stack developer for the car dealer area.
+Developed features using an iterative and customer-focused approach.
+Technical lead and mentor for frontend development.
+Coordinator of interdisciplinary and company-wide frontend group.
+Co-architected and developed modular UI library similar to Bootstrap.
 
 <hr />
 
-### Education
+#### Working Student Software Development - [AutoScout24 GmbH](http://www.autoscout24.de) (2010 - 2011)
 
-#### Multimedia - Hochschule Augsburg - [Hochschule Augsburg](http://www.hs-augsburg.de)
+Refactored and modularized existing CSS codebase.
+Pushed for modern frontend development with newer and modular JavaScript code.
 
-*October 2005 - Feburary 2011*
+<hr />
 
-* Diploma in Informatics (Computer Science)
-* Thesis: "Design and prototypical development of a service-based Web Content Management System"
+#### Partner & Head of Development - [artecho GbR](http://www.artecho.de) (2008 - 2010)
+
+Partner & Head of Development at own agency for web-based software solutions.
+Architected and developed software for more than 30 clients.
+The projects ranged from small websites using a custom headless CMS to larger platforms and e-commerce sites using Drupal.
+
+<hr />
+
+#### Tutor for different subjects - [Hochschule Augsburg](http://www.hs-augsburg.de) (2006 - 2010)
+
+Tutor for the subjects Programming with Java/J2SE, Multimedia Programming with Flash/ActionScript3/Flex, and Databases with PostgreSQL. Guided up to 30 students per semester.
+
+<hr />
+
+#### Web Developer - Alex Lawrence (2006 - 2008)
+
+Freelance software development of web-based solutions for more than 15 clients.
+Developed a custom headless CMS in PHP to deliver solutions faster.
+
+<hr />
+
+#### Multimedia - Hochschule Augsburg - [Hochschule Augsburg](http://www.hs-augsburg.de) (2005 - 2011)
+
+Graduated with a Diploma in Informatics (Computer Science).
+Diploma thesis: "Design and prototypical development of a service-based Web Content Management System"

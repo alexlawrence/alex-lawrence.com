@@ -25,10 +25,7 @@ aliases:
       <a href="https://leanpub.com/implementing-ddd-cqrs-and-event-sourcing">
         Buy it on Leanpub
       </a>
-      |
-      <a href="https://gumroad.com/l/implementing-ddd-cqrs-and-event-sourcing">
-        Buy it on Gumroad
-      </a>
     </p>
   </section>
 </section>
+

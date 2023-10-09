@@ -9,7 +9,7 @@ pygmentsstyle = "dracula"
 pygmentscodefences = true
 
 [params]
-subtitle = "Full-Stack Developer, Technical Lead, Software Architect"
+subtitle = "Coding Architect, Technical Lead, Author"
 disableDisqusTypes = ["page"]
 mode = "auto"
 customCSS = "css/index.css"
