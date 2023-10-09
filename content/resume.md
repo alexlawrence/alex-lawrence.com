@@ -47,7 +47,7 @@ Heavily utilized A/B testing to find optimal solutions.
 
 <hr />
 
-#### Founder, Software Arhitect, Developer - [YUNIT](http://www.yunit.org) (2013 - 2018)
+#### Founder, Software Architect, Developer - [YUNIT](http://www.yunit.org) (2013 - 2018)
 
 Founded a small startup and built a mouse tracking tool as a german competitor to products such as Mouseflow.
 Responsible for the software architecture, backend development, and operations.
