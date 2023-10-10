@@ -54,3 +54,6 @@ url = "https://twitter.com/lx_lawrence"
 name = "RSS"
 icon = "rss"
 url = "/posts/index.xml"
+
+[markup.goldmark.renderer]
+unsafe= true
