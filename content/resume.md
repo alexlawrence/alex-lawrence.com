@@ -9,7 +9,7 @@ Currently authoring a book on message-driven systems with a renowned US publishe
 
 <hr />
 
-#### Content Creator - Hochschule Zwickau (2021 - 2022)
+#### Content Creator - [University of Applied Sciences Zwickau](https://www.fh-zwickau.de/) (2021 - 2022)
 
 Planned and produced a video series around DDD, CQRS, and Event Sourcing for a master studies course.
 
@@ -21,7 +21,7 @@ Authored the book "Implementing DDD, CQRS and Event Sourcing" with around 900 so
 
 <hr />
 
-#### Technical Lead, Sofware Architect [Personio](https://www.personio.de) (2021 - 2023)
+#### Technical Lead, Sofware Architect - [Personio](https://www.personio.de) (2021 - 2023)
 
 Co-architected and built critical part of payroll product with a bi-temporal domain model.
 Supported with building initial version of system-wide platform to facilitate data replication through Event-carried State Transfer.
@@ -79,7 +79,7 @@ Supported operations with containerization and orchestration.
 
 <hr />
 
-#### Lecturer at University of Augsburg (2014 - 2015)
+#### Lecturer at University - [University of Applied Sciences Augsburg](http://www.hs-augsburg.de) (2014 - 2015)
 
 Lecturer for the subject "Multimedia Programming" in the third semester of the studies "Interactive Media". Covered topics: JavaScript fundamentals, web technologies, essential design patterns.
 
@@ -117,7 +117,7 @@ The projects ranged from small websites using a custom headless CMS to larger pl
 
 <hr />
 
-#### Tutor for different subjects - [Hochschule Augsburg](http://www.hs-augsburg.de) (2006 - 2010)
+#### Tutor for different subjects - [University of Applied Sciences Augsburg](http://www.hs-augsburg.de) (2006 - 2010)
 
 Tutor for the subjects Programming with Java/J2SE, Multimedia Programming with Flash/ActionScript3/Flex, and Databases with PostgreSQL. Guided up to 30 students per semester.
 
@@ -130,7 +130,7 @@ Developed a custom headless CMS in PHP to deliver solutions faster.
 
 <hr />
 
-#### Multimedia - Hochschule Augsburg - [Hochschule Augsburg](http://www.hs-augsburg.de) (2005 - 2011)
+#### Multimedia - [University of Applied Sciences Augsburg](http://www.hs-augsburg.de) (2005 - 2011)
 
 Graduated with a Diploma in Informatics (Computer Science).
 Diploma thesis: "Design and prototypical development of a service-based Web Content Management System"
